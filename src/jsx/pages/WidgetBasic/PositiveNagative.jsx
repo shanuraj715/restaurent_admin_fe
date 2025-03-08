@@ -65,7 +65,7 @@ export default class NagetivePositive extends PureComponent {
                      bottom: 5,
                   }}
                >
-                  <Bar dataKey="pv" fill="#EA7A9A" />
+                  <Bar dataKey="pv" fill="#1B3358" />
                   <Bar dataKey="uv" fill="#209F84" />
                   <Bar dataKey="amt" fill="#2781D5" />
                </BarChart>

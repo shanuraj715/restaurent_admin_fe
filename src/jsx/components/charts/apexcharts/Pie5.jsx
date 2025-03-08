@@ -125,7 +125,7 @@ class ApexRedialBar2 extends React.Component {
           opacity: 1,
         },
 
-        colors: ["#EA7A9A", "#EA7A9A", "#EA7A9A"],
+        colors: ["#1B3358", "#1B3358", "#1B3358"],
         labels: ["Ticket A", "Ticket B", "Ticket C"],
         legend: {
           fontSize: "14px",

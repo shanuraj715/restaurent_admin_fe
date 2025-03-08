@@ -1,22 +1,22 @@
 import React, { Fragment } from "react";
 import Swal from "sweetalert2";
 import PageTitle from "../../../layouts/PageTitle";
-import thumbpng from  '../../../../assets/images/hand.png'
+import thumbpng from '../../../../assets_old/images/hand.png'
 
 const customImageAlert = () => {
   Swal.fire({
-    title:"Sweet !!",
+    title: "Sweet !!",
     text: "Hey, Here's a custom image !!",
     imageUrl: thumbpng,
-    imageHeight: 100, 
-    imageWidth: 100,  
+    imageHeight: 100,
+    imageWidth: 100,
   });
 }
 
 const MainSweetAlert = () => {
   return (
-    <Fragment>		
-      <PageTitle activeMenu="Sweet Alert" motherMenu="Plugins" />	
+    <Fragment>
+      <PageTitle activeMenu="Sweet Alert" motherMenu="Plugins" />
       <div className="row">
         <div className="col-xl-3 col-xxl-4 col-lg-4 col-md-6">
           <div className="card">
@@ -25,11 +25,11 @@ const MainSweetAlert = () => {
               <div className="card-content">
                 <div className="sweetalert">
                   <button
-                    onClick={() =>                      
+                    onClick={() =>
                       Swal.fire({
                         icon: 'error',
                         title: 'Oops',
-                        text: 'Something went wrong!',                        
+                        text: 'Something went wrong!',
                       })
                     }
                     className="btn btn-danger btn sweet-wrong"
@@ -46,16 +46,16 @@ const MainSweetAlert = () => {
             <div className="card-body">
               <h4 className="card-title mb-3">Sweet Message</h4>
               <div className="card-content">
-                <div className="sweetalert">				
-				          <button
-                    onClick={() =>                      
+                <div className="sweetalert">
+                  <button
+                    onClick={() =>
                       Swal.fire("Hey, Here's a message !!")
                     }
                     className="btn btn-info btn sweet-message"
                   >
                     Sweet Message
-                 </button>
-				
+                  </button>
+
                 </div>
               </div>
             </div>
@@ -66,11 +66,11 @@ const MainSweetAlert = () => {
             <div className="card-body">
               <h4 className="card-title mb-3">Sweet Text</h4>
               <div className="card-content">
-                <div className="sweetalert">    
-				          <button
-                    onClick={() =>                      
+                <div className="sweetalert">
+                  <button
+                    onClick={() =>
                       Swal.fire(
-                        "Hey, Here's a message !!", 
+                        "Hey, Here's a message !!",
                         "It's pretty, isn't it?"
                       )
                     }
@@ -89,12 +89,12 @@ const MainSweetAlert = () => {
               <h4 className="card-title mb-3">Sweet Success</h4>
               <div className="card-content">
                 <div className="sweetalert">
-                  <button                    
-                    onClick={() =>                      
+                  <button
+                    onClick={() =>
                       Swal.fire({
                         icon: 'success',
                         title: 'Good job!',
-                        text: "You clicked the button!",                        
+                        text: "You clicked the button!",
                       })
                     }
                     className="btn btn-success btn sweet-success"
@@ -183,13 +183,13 @@ const MainSweetAlert = () => {
               <h4 className="card-title mb-3">Sweet Image Message</h4>
               <div className="card-content">
                 <div className="sweetalert ">
-				          <button                   
+                  <button
                     onClick={customImageAlert}
-                    className="btn btn-info btn sweet-image-message" 
+                    className="btn btn-info btn sweet-image-message"
                   >
                     Sweet Image Message
                   </button>
-				
+
                 </div>
               </div>
             </div>
@@ -200,11 +200,11 @@ const MainSweetAlert = () => {
             <div className="card-body">
               <h4 className="card-title mb-3">Sweet Alert</h4>
               <div className="card-content">
-                <div className="sweetalert">			
-				          <button
-                    onClick={() =>                      
+                <div className="sweetalert">
+                  <button
+                    onClick={() =>
                       Swal.fire(
-                        "Sweet !!", 
+                        "Sweet !!",
                         "true"
                       )
                     }
@@ -225,11 +225,11 @@ const MainSweetAlert = () => {
               <div className="card-content">
                 <div className="sweetalert">
                   <button
-                    onClick={() =>                      
-                      Swal.fire({                        
+                    onClick={() =>
+                      Swal.fire({
                         title: "Sweet auto close alert !!",
                         text: "Hey, i will close in 2 seconds !!",
-                        showConfirmButton: false,                  
+                        showConfirmButton: false,
                         timer: 1500
                       })
                     }
@@ -249,7 +249,7 @@ const MainSweetAlert = () => {
               <div className="card-content">
                 <div className="sweetalert">
                   <button
-                    onClick={() =>                     
+                    onClick={() =>
                       Swal.fire({
                         title: 'Enter an input !!',
                         text: "Write something interesting !!",
@@ -276,7 +276,7 @@ const MainSweetAlert = () => {
               <div className="card-content"></div>
               <div className="sweetalert">
                 <button
-                  onClick={() =>                    
+                  onClick={() =>
                     Swal.fire({
                       title: 'Submit your Github username',
                       input: 'text',

@@ -28,12 +28,12 @@ function Orders() {
     }
   };
 
-  
+
   useEffect(() => {
     setData(document.querySelectorAll("#orders tbody tr"));
   }, [test]);
-  
-  activePag.current === 0 && chageData(0, sort);  
+
+  activePag.current === 0 && chageData(0, sort);
   let paggination = Array(Math.ceil(data.length / sort))
     .fill()
     .map((_, i) => i + 1);
@@ -57,13 +57,13 @@ function Orders() {
   }, [openModal]);
 
   return (
-    <>      
+    <>
       <div className="d-sm-flex mb-lg-4 mb-2">
         <Dropdown className="dropdown mb-2 ms-auto me-3">
           <Dropdown.Toggle
             to="#"
             className="i-false btn btn-primary btn-rounded light"
-            
+
             aria-expanded="false"
           >
             <i className="las la-bolt scale5 me-2" />
@@ -81,10 +81,10 @@ function Orders() {
               <span className="text-success">Delivery</span>
             </Dropdown.Item>
           </Dropdown.Menu>
-        </Dropdown>       
+        </Dropdown>
         <div id="clock"></div>
-          <input placeholder="Today" className="d-inline-block form-control date-button btn btn-primary light btn-rounded" onClick={() => setOpenModal(!openModal)} />          
-        
+        <input placeholder="Today" className="d-inline-block form-control date-button btn btn-primary light btn-rounded" onClick={() => setOpenModal(!openModal)} />
+
       </div>
       <div className="row">
         <div className="col-lg-12">
@@ -196,7 +196,7 @@ function Orders() {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <circle cx={6} cy={6} r={6} fill="#EA7A9A" />
+                          <circle cx={6} cy={6} r={6} fill="#1B3358" />
                         </svg>
                         On Delivery
                       </span>
@@ -277,7 +277,7 @@ function Orders() {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <circle cx={6} cy={6} r={6} fill="#EA7A9A" />
+                          <circle cx={6} cy={6} r={6} fill="#1B3358" />
                         </svg>
                         On Delivery
                       </span>
@@ -634,7 +634,7 @@ function Orders() {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <circle cx={6} cy={6} r={6} fill="#EA7A9A" />
+                          <circle cx={6} cy={6} r={6} fill="#1B3358" />
                         </svg>
                         On Delivery
                       </span>
@@ -715,7 +715,7 @@ function Orders() {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <circle cx={6} cy={6} r={6} fill="#EA7A9A" />
+                          <circle cx={6} cy={6} r={6} fill="#1B3358" />
                         </svg>
                         On Delivery
                       </span>
@@ -796,7 +796,7 @@ function Orders() {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <circle cx={6} cy={6} r={6} fill="#EA7A9A" />
+                          <circle cx={6} cy={6} r={6} fill="#1B3358" />
                         </svg>
                         On Delivery
                       </span>
@@ -960,9 +960,8 @@ function Orders() {
                       <Link
                         key={i}
                         to="/orders"
-                        className={`paginate_button  ${
-                          activePag.current === i ? "current" : ""
-                        } `}
+                        className={`paginate_button  ${activePag.current === i ? "current" : ""
+                          } `}
                         onClick={() => onClick(i)}
                       >
                         {number}

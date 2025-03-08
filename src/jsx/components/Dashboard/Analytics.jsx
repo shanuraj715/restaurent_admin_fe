@@ -9,28 +9,28 @@ import CountUp from "react-countup";
 
 //Images
 //Card
-import card_pic2 from "../../../assets/images/card/pic2.jpg";
-import card_pic4 from "../../../assets/images/card/pic4.jpg";
-import card_pic8 from "../../../assets/images/card/pic8.jpg";
-import card_pic9 from "../../../assets/images/card/pic9.jpg";
-import card_pic11 from "../../../assets/images/card/pic11.jpg";
+import card_pic2 from "../../../assets_old/images/card/pic2.jpg";
+import card_pic4 from "../../../assets_old/images/card/pic4.jpg";
+import card_pic8 from "../../../assets_old/images/card/pic8.jpg";
+import card_pic9 from "../../../assets_old/images/card/pic9.jpg";
+import card_pic11 from "../../../assets_old/images/card/pic11.jpg";
 
 // Menus
-import menu9 from "../../../assets/images/menus/9.png";
-import menu10 from "../../../assets/images/menus/10.png";
-import menu11 from "../../../assets/images/menus/11.png";
-import menu12 from "../../../assets/images/menus/12.png";
+import menu9 from "../../../assets_old/images/menus/9.png";
+import menu10 from "../../../assets_old/images/menus/10.png";
+import menu11 from "../../../assets_old/images/menus/11.png";
+import menu12 from "../../../assets_old/images/menus/12.png";
 
 // Dish
-import dish_pic1 from "../../../assets/images/dish/pic1.jpg";
-import dish_pic2 from "../../../assets/images/dish/pic2.jpg";
-import dish_pic3 from "../../../assets/images/dish/pic3.jpg";
-import dish_pic4 from "../../../assets/images/dish/pic4.jpg";
-import dish_pic5 from "../../../assets/images/dish/pic5.jpg";
+import dish_pic1 from "../../../assets_old/images/dish/pic1.jpg";
+import dish_pic2 from "../../../assets_old/images/dish/pic2.jpg";
+import dish_pic3 from "../../../assets_old/images/dish/pic3.jpg";
+import dish_pic4 from "../../../assets_old/images/dish/pic4.jpg";
+import dish_pic5 from "../../../assets_old/images/dish/pic5.jpg";
 
 
 // Svg
-import IcStat3 from "../../../assets/images/svg/ic_stat3.svg";
+import IcStat3 from "../../../assets_old/images/svg/ic_stat3.svg";
 
 // Functional Components
 import MonthlySelling from "../Sego/Analytics/MonthlySelling";
@@ -183,7 +183,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -191,7 +191,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -199,7 +199,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -207,7 +207,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -230,7 +230,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -270,7 +270,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -278,7 +278,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -286,7 +286,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -294,7 +294,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -317,7 +317,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -357,7 +357,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -365,7 +365,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -373,7 +373,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -381,7 +381,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -404,7 +404,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -444,7 +444,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -452,7 +452,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -460,7 +460,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -468,7 +468,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -491,7 +491,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -531,7 +531,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -539,7 +539,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -547,7 +547,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -555,7 +555,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -578,7 +578,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -618,7 +618,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -626,7 +626,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -634,7 +634,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -642,7 +642,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -665,7 +665,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -713,7 +713,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -721,7 +721,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -729,7 +729,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -737,7 +737,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -760,7 +760,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -800,7 +800,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -808,7 +808,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -816,7 +816,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -824,7 +824,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -847,7 +847,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -887,7 +887,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -895,7 +895,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -903,7 +903,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -911,7 +911,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -934,7 +934,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -974,7 +974,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -982,7 +982,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -990,7 +990,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -998,7 +998,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -1021,7 +1021,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -1061,7 +1061,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -1069,7 +1069,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -1077,7 +1077,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -1085,7 +1085,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -1108,7 +1108,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -1156,7 +1156,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -1164,7 +1164,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -1172,7 +1172,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -1180,7 +1180,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -1203,7 +1203,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -1243,7 +1243,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -1251,7 +1251,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -1259,7 +1259,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -1267,7 +1267,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -1290,7 +1290,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -1330,7 +1330,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -1338,7 +1338,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -1346,7 +1346,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -1354,7 +1354,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -1377,7 +1377,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -1417,7 +1417,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -1425,7 +1425,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -1433,7 +1433,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -1441,7 +1441,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -1464,7 +1464,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -1512,7 +1512,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -1520,7 +1520,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -1528,7 +1528,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -1536,7 +1536,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -1559,7 +1559,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -1599,7 +1599,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -1607,7 +1607,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -1615,7 +1615,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -1623,7 +1623,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -1646,7 +1646,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -1686,7 +1686,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -1694,7 +1694,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -1702,7 +1702,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -1710,7 +1710,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -1733,7 +1733,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -1773,7 +1773,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -1781,7 +1781,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -1789,7 +1789,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -1797,7 +1797,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -1820,7 +1820,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -1860,7 +1860,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -1868,7 +1868,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -1876,7 +1876,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -1884,7 +1884,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -1907,7 +1907,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -1947,7 +1947,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -1955,7 +1955,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -1963,7 +1963,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -1971,7 +1971,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -1994,7 +1994,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -2042,7 +2042,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -2050,7 +2050,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -2058,7 +2058,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -2066,7 +2066,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -2089,7 +2089,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -2129,7 +2129,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -2137,7 +2137,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -2145,7 +2145,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -2153,7 +2153,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -2176,7 +2176,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -2216,7 +2216,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -2224,7 +2224,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -2232,7 +2232,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -2240,7 +2240,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -2263,7 +2263,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -2303,7 +2303,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -2311,7 +2311,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -2319,7 +2319,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -2327,7 +2327,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -2350,7 +2350,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -2394,7 +2394,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -2402,7 +2402,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -2410,7 +2410,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -2418,7 +2418,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -2441,7 +2441,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -2481,7 +2481,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -2489,7 +2489,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -2497,7 +2497,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -2505,7 +2505,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -2528,7 +2528,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -2568,7 +2568,7 @@ function Analytics() {
                                   width="2.04545"
                                   height={15}
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="4.59131"
@@ -2576,7 +2576,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="10.9091"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="8.68213"
@@ -2584,7 +2584,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="4.77273"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                                 <rect
                                   x="12.7729"
@@ -2592,7 +2592,7 @@ function Analytics() {
                                   width="2.04545"
                                   height="12.9545"
                                   rx="1.02273"
-                                  fill="#EA7A9A"
+                                  fill="#1B3358"
                                 />
                               </svg>
                               <span className="fs-14 text-black">
@@ -2615,7 +2615,7 @@ function Analytics() {
                           </div>
                           <div className="d-inline-block relative donut-chart-sale">
                             <DoughnutChart3
-                              backgroundColor="#EA7A9A"
+                              backgroundColor="#1B3358"
                               backgroundColor2="#ECECEC"
                               height="100"
                               width="100"
@@ -2843,7 +2843,7 @@ function Analytics() {
                     <Dropdown.Toggle
                       type="button"
                       className="btn btn-primary dropdown-toggle light fs-14"
-                                            
+
                     >
                       Weekly
                     </Dropdown.Toggle>
@@ -3151,7 +3151,7 @@ function Analytics() {
                     <Dropdown.Toggle
                       type="button"
                       className="btn btn-primary dropdown-toggle light fs-14"
-                                            
+
                     >
                       Weekly
                     </Dropdown.Toggle>

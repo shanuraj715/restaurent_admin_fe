@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom'
 import MsgBox from './MsgBox'
 
 /// Images
-import avatar1 from '../../../assets/images/avatar/1.jpg'
-import avatar2 from '../../../assets/images/avatar/2.jpg'
-import avatar3 from '../../../assets/images/avatar/3.jpg'
-import avatar4 from '../../../assets/images/avatar/4.jpg'
-import avatar5 from '../../../assets/images/avatar/5.jpg'
+import avatar1 from '../../../assets_old/images/avatar/1.jpg'
+import avatar2 from '../../../assets_old/images/avatar/2.jpg'
+import avatar3 from '../../../assets_old/images/avatar/3.jpg'
+import avatar4 from '../../../assets_old/images/avatar/4.jpg'
+import avatar5 from '../../../assets_old/images/avatar/5.jpg'
 
-const Chat = ({  toggleChatBox, toggleTab }) => {
+const Chat = ({ toggleChatBox, toggleTab }) => {
   const [openMsg, setOpenMsg] = useState(false)
   return (
     <div
@@ -18,9 +18,8 @@ const Chat = ({  toggleChatBox, toggleTab }) => {
       role='tabpanel'
     >
       <div
-        className={`card mb-sm-3 mb-md-0 contacts_card dz-chat-user-box ${
-          openMsg ? 'd-none' : ''
-        }`}
+        className={`card mb-sm-3 mb-md-0 contacts_card dz-chat-user-box ${openMsg ? 'd-none' : ''
+          }`}
       >
         <div className='card-header chat-list-header text-center'>
           <Link to='#'>
@@ -335,7 +334,7 @@ const Chat = ({  toggleChatBox, toggleTab }) => {
       <MsgBox
         avatar1={avatar1}
         avatar2={avatar2}
-        openMsg={openMsg}        
+        openMsg={openMsg}
         offMsg={() => setOpenMsg(false)}
       />
     </div>

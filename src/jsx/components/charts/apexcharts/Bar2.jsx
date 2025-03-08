@@ -29,7 +29,7 @@ class ApexBar2 extends React.Component {
             },
           },
         },
-        colors: ["#EA7A9A"],
+        colors: ["#1B3358"],
         legend: {
           show: false,
           position: "top",
@@ -53,7 +53,7 @@ class ApexBar2 extends React.Component {
         },
         xaxis: {
           show: false,
-          categories: [2011, 2012, 2013, 2014, 2015, 2016, 2017,2018,2019,2020,2021,2022],
+          categories: [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022],
         },
       },
     };

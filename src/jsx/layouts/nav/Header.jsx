@@ -6,8 +6,8 @@ import { Dropdown } from "react-bootstrap";
 import Logout from './Logout';
 
 /// Image
-import profile from "../../../assets/images/profile/17.jpg";
-import avatar from "../../../assets/images/avatar/1.jpg";
+import profile from "../../../assets_old/images/profile/17.jpg";
+import avatar from "../../../assets_old/images/avatar/1.jpg";
 
 const Header = ({ onNote }) => {
   var path = window.location.pathname.split("/");
@@ -16,26 +16,26 @@ const Header = ({ onNote }) => {
   var finalName = filterName.includes("app")
     ? filterName.filter((f) => f !== "app")
     : filterName.includes("ui")
-    ? filterName.filter((f) => f !== "ui")
-    : filterName.includes("uc")
-    ? filterName.filter((f) => f !== "uc")
-    : filterName.includes("basic")
-    ? filterName.filter((f) => f !== "basic")
-    : filterName.includes("jquery")
-    ? filterName.filter((f) => f !== "jquery")
-    : filterName.includes("table")
-    ? filterName.filter((f) => f !== "table")
-    : filterName.includes("page")
-    ? filterName.filter((f) => f !== "page")
-    : filterName.includes("email")
-    ? filterName.filter((f) => f !== "email")
-    : filterName.includes("ecom")
-    ? filterName.filter((f) => f !== "ecom")
-    : filterName.includes("chart")
-    ? filterName.filter((f) => f !== "chart")
-    : filterName.includes("editor")
-    ? filterName.filter((f) => f !== "editor")
-    : filterName;
+      ? filterName.filter((f) => f !== "ui")
+      : filterName.includes("uc")
+        ? filterName.filter((f) => f !== "uc")
+        : filterName.includes("basic")
+          ? filterName.filter((f) => f !== "basic")
+          : filterName.includes("jquery")
+            ? filterName.filter((f) => f !== "jquery")
+            : filterName.includes("table")
+              ? filterName.filter((f) => f !== "table")
+              : filterName.includes("page")
+                ? filterName.filter((f) => f !== "page")
+                : filterName.includes("email")
+                  ? filterName.filter((f) => f !== "email")
+                  : filterName.includes("ecom")
+                    ? filterName.filter((f) => f !== "ecom")
+                    : filterName.includes("chart")
+                      ? filterName.filter((f) => f !== "chart")
+                      : filterName.includes("editor")
+                        ? filterName.filter((f) => f !== "editor")
+                        : filterName;
   return (
     <div className="header">
       <div className="header-content">
@@ -205,7 +205,7 @@ const Header = ({ onNote }) => {
                           </div>
                         </div>
                       </li>
-                    </ul>                    
+                    </ul>
                   </div>
                   <Link className="all-notification" to="#">
                     See all notifications <i className="ti-arrow-right" />
@@ -357,7 +357,7 @@ const Header = ({ onNote }) => {
                           </h6>
                         </Link>
                       </li>
-                    </ul>                   
+                    </ul>
                   </div>
                 </Dropdown.Menu>
               </Dropdown>

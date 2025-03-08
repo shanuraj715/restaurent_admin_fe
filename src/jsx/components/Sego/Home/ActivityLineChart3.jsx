@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { Line } from "react-chartjs-2";
 
 const data = {
-   defaultFontFamily: "Poppins",
-   labels: [
+  defaultFontFamily: "Poppins",
+  labels: [
     "Jan",
     "Feb",
     "Mar",
@@ -20,12 +20,12 @@ const data = {
   datasets: [
     {
       label: "My First dataset",
-      data:  [20, 35, 70, 45, 40, 35, 30, 35, 10, 40, 60, 20],
-      borderColor: '#EA7A9A',
+      data: [20, 35, 70, 45, 40, 35, 30, 35, 10, 40, 60, 20],
+      borderColor: '#1B3358',
       borderWidth: "4",
-      barThickness:'flex',
+      barThickness: 'flex',
       backgroundColor: 'rgba(255, 199, 182, 0.3)',
-      minBarLength:10
+      minBarLength: 10
     }
   ],
 };
@@ -33,13 +33,13 @@ const data = {
 const options = {
   responsive: true,
   maintainAspectRatio: false,
-  
+
   legend: {
     display: false
   },
   scales: {
     yAxes: [{
-       gridColor: "navy",
+      gridColor: "navy",
       gridLines: {
         color: "rgba(0,0,0,0.1)",
         height: 50,
@@ -54,7 +54,7 @@ const options = {
     }],
     xAxes: [{
       barPercentage: 0.3,
-      
+
       gridLines: {
         display: false,
         zeroLineColor: "transparent"
@@ -90,13 +90,13 @@ const options = {
   }
 };
 class ActivityLineChart3 extends Component {
-   render() {
-      return (
-         <div style={{height:"350px"}}>
-            <Line data={data} options={options} height={350} />
-         </div>
-      );
-   }
+  render() {
+    return (
+      <div style={{ height: "350px" }}>
+        <Line data={data} options={options} height={350} />
+      </div>
+    );
+  }
 }
 
 export default ActivityLineChart3;

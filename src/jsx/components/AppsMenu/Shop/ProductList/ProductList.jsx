@@ -4,13 +4,13 @@ import { Modal } from "react-bootstrap";
 import PageTitle from "../../../../layouts/PageTitle";
 
 // images
-import avatar1 from "../../../../../assets/images/avatar/1.jpg";
-import product2 from "../../../../../assets/images/product/2.jpg";
-import product3 from "../../../../../assets/images/product/3.jpg";
-import product4 from "../../../../../assets/images/product/4.jpg";
-import product5 from "../../../../../assets/images/product/5.jpg";
-import product6 from "../../../../../assets/images/product/6.jpg";
-import product7 from "../../../../../assets/images/product/7.jpg";
+import avatar1 from "../../../../../assets_old/images/avatar/1.jpg";
+import product2 from "../../../../../assets_old/images/product/2.jpg";
+import product3 from "../../../../../assets_old/images/product/3.jpg";
+import product4 from "../../../../../assets_old/images/product/4.jpg";
+import product5 from "../../../../../assets_old/images/product/5.jpg";
+import product6 from "../../../../../assets_old/images/product/6.jpg";
+import product7 from "../../../../../assets_old/images/product/7.jpg";
 
 const ProductList = () => {
   const [star, setStar] = useState(4);
@@ -59,8 +59,8 @@ const ProductList = () => {
                       <span className="review-text">(34 reviews) / </span>
                       <Link
                         className="product-review"
-                        to="/ecom-product-list"                        
-                        onClick={() => setReviewModal(true)}                        
+                        to="/ecom-product-list"
+                        onClick={() => setReviewModal(true)}
                       >
                         Write a review?
                       </Link>
@@ -469,9 +469,9 @@ const ProductList = () => {
                 <h5 className="modal-title">Review</h5>
                 <button
                   type="button"
-                  className="btn-close"                  
+                  className="btn-close"
                   onClick={() => setReviewModal(false)}
-                >                  
+                >
                 </button>
               </div>
               <div className="modal-body">
@@ -498,14 +498,14 @@ const ProductList = () => {
                           className="d-flex justify-content-center align-items-center"
                         >
                           {[1, 2, 3, 4, 5].map((numb, i) => (
-                            <li className={`star me-1 ${numb <= star && "selected"}` } key={i}
-                              onClick={() => { alert(`Thanks! You rated this ${numb} stars.`); setStar(numb); }}                              
+                            <li className={`star me-1 ${numb <= star && "selected"}`} key={i}
+                              onClick={() => { alert(`Thanks! You rated this ${numb} stars.`); setStar(numb); }}
                             >
                               <i className="fa fa-star" />
                             </li>
-                          ))} 
+                          ))}
                         </ul>
-						
+
                       </div>
                     </div>
                   </div>

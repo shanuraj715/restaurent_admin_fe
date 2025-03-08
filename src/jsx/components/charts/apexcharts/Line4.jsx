@@ -34,7 +34,7 @@ class ApexLine4 extends React.Component {
 
         stroke: {
           width: [4, 4, 4],
-          colors: ["#EA7A9A", "#1EA7C5", "#FF9432"],
+          colors: ["#1B3358", "#1EA7C5", "#FF9432"],
           curve: "straight",
         },
         legend: {
@@ -57,14 +57,14 @@ class ApexLine4 extends React.Component {
             "Dec",
           ],
         },
-        colors: ["#EA7A9A", "#1EA7C5", "#FF9432"],
+        colors: ["#1B3358", "#1EA7C5", "#FF9432"],
 
         markers: {
           size: [8, 8, 6],
           strokeWidth: [0, 0, 4],
-          strokeColors: ["#EA7A9A", "#1EA7C5", "#FF9432"],
+          strokeColors: ["#1B3358", "#1EA7C5", "#FF9432"],
           border: 0,
-          colors: ["#EA7A9A", "#1EA7C5", "#fff"],
+          colors: ["#1B3358", "#1EA7C5", "#fff"],
           hover: {
             size: 10,
           },

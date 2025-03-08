@@ -13,7 +13,7 @@ class DoughnutChart3 extends Component {
                backgroundColor: [
                   this.props.backgroundColor
                      ? this.props.backgroundColor
-                     : "#EA7A9A",
+                     : "#1B3358",
                   this.props.backgroundColor2,
                ],
             },

@@ -3,24 +3,24 @@ import PageTitle from "../../../../layouts/PageTitle";
 import { Dropdown } from "react-bootstrap";
 
 /// images
-import avartar5 from "../../../../../assets/images/avatar/5.png";
-import avartar1 from "../../../../../assets/images/avatar/1.png";
+import avartar5 from "../../../../../assets_old/images/avatar/5.png";
+import avartar1 from "../../../../../assets_old/images/avatar/1.png";
 import { Link } from "react-router-dom";
 
 const Customers = () => {
    const drop = (
       <Dropdown>
-         <Dropdown.Toggle variant="primary"  className="table-dropdown i-false btn  tp-btn-light sharp">
-			<span className="fs--1">
-				<svg xmlns="http://www.w3.org/2000/svg"  width="18px" height="18px" viewBox="0 0 24 24" version="1.1">
-					<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-						<rect x="0" y="0" width="24" height="24"></rect>
-						<circle fill="#000000" cx="5" cy="12" r="2"></circle>
-						<circle fill="#000000" cx="12" cy="12" r="2"></circle>
-						<circle fill="#000000" cx="19" cy="12" r="2"></circle>
-					</g>
-				</svg>
-			</span>
+         <Dropdown.Toggle variant="primary" className="table-dropdown i-false btn  tp-btn-light sharp">
+            <span className="fs--1">
+               <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24" version="1.1">
+                  <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                     <rect x="0" y="0" width="24" height="24"></rect>
+                     <circle fill="#000000" cx="5" cy="12" r="2"></circle>
+                     <circle fill="#000000" cx="12" cy="12" r="2"></circle>
+                     <circle fill="#000000" cx="19" cy="12" r="2"></circle>
+                  </g>
+               </svg>
+            </span>
          </Dropdown.Toggle>
          <Dropdown.Menu>
             <Dropdown.Item href="#">Edit</Dropdown.Item>
@@ -32,7 +32,7 @@ const Customers = () => {
    );
 
    const chackboxFun = (type) => {
-      setTimeout(()=>{      
+      setTimeout(() => {
          const chackbox = document.querySelectorAll(".customer_shop_single input");
          const motherChackBox = document.querySelector(".customer_shop input");
          for (let i = 0; i < chackbox.length; i++) {
@@ -52,7 +52,7 @@ const Customers = () => {
                }
             }
          }
-      },100);
+      }, 100);
    };
 
    const chack = (i) => (
@@ -99,7 +99,7 @@ const Customers = () => {
                                  <th>Name</th>
                                  <th>Email</th>
                                  <th>Phone</th>
-                                 <th className="ps-5" style={{minWidth:200}}>
+                                 <th className="ps-5" style={{ minWidth: 200 }}>
                                     Billing Address
                                  </th>
                                  <th>Joined</th>

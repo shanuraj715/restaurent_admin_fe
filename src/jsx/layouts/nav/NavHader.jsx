@@ -2,18 +2,18 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 /// images
-import logo from "../../../assets/images/logo.png";
-import logoText from "../../../assets/images/logo-text.png";
+import logo from "../../../assets_old/images/logo.png";
+import logoText from "../../../assets_old/images/logo-text.png";
 
-export function  NavMenuToggle(){
-	setTimeout(()=>{	
-		let mainwrapper = document.querySelector("#main-wrapper");
-		if(mainwrapper.classList.contains('menu-toggle')){
-			mainwrapper.classList.remove("menu-toggle");
-		}else{
-			mainwrapper.classList.add("menu-toggle");
-		}
-	},200);
+export function NavMenuToggle() {
+   setTimeout(() => {
+      let mainwrapper = document.querySelector("#main-wrapper");
+      if (mainwrapper.classList.contains('menu-toggle')) {
+         mainwrapper.classList.remove("menu-toggle");
+      } else {
+         mainwrapper.classList.add("menu-toggle");
+      }
+   }, 200);
 }
 
 const NavHader = () => {
@@ -26,12 +26,11 @@ const NavHader = () => {
             <img className="brand-title" src={logoText} alt="" />
          </Link>
 
-         <div className="nav-control" 
-            onClick={() => 
-               {
-                  setToggle(!toggle)
-                  NavMenuToggle()
-               }
+         <div className="nav-control"
+            onClick={() => {
+               setToggle(!toggle)
+               NavMenuToggle()
+            }
             }
          >
             <div className={`hamburger ${toggle ? "is-active" : ""}`}>

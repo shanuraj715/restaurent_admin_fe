@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 
-import logo from '../../assets/images/logo-full-dark.png';
+import logo from '../../assets_old/images/logo-full-dark.png';
 
 const LockScreen = () => {
    const navigate = useNavigate();
@@ -9,7 +9,7 @@ const LockScreen = () => {
       e.preventDefault();
       navigate("/");
    };
-   const  [eyeOpen, setEyeOpen] = useState(false);
+   const [eyeOpen, setEyeOpen] = useState(false);
    return (
       <div className="authincation ">
          <div className="container ">
@@ -33,21 +33,21 @@ const LockScreen = () => {
                               >
                                  <div className="mb-3">
                                     <label className="form-label">Password</label>
-                                 <div className="position-relative">
-                                    <input
-                                       type={eyeOpen ? 'text' : 'password'}
-                                       className="form-control"
-                                       defaultValue="12345"
-                                       name="password"
-                                    />
-												<span className={`show-pass eye ${eyeOpen ? 'active' : ''}`}
-                                       onClick={()=>setEyeOpen(!eyeOpen)}
-                                    >
-													<i className="fa fa-eye-slash"/>
-													<i className="fa fa-eye"/>
-												</span>
-											</div>
-                                    
+                                    <div className="position-relative">
+                                       <input
+                                          type={eyeOpen ? 'text' : 'password'}
+                                          className="form-control"
+                                          defaultValue="12345"
+                                          name="password"
+                                       />
+                                       <span className={`show-pass eye ${eyeOpen ? 'active' : ''}`}
+                                          onClick={() => setEyeOpen(!eyeOpen)}
+                                       >
+                                          <i className="fa fa-eye-slash" />
+                                          <i className="fa fa-eye" />
+                                       </span>
+                                    </div>
+
                                  </div>
                                  <div className="text-center">
                                     <button

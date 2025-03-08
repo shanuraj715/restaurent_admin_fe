@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 //** Import Image */
-import Product5 from "../../../../assets/images/card/pic5.jpg";
-import Product6 from "../../../../assets/images/card/pic6.jpg";
-import Product7 from "../../../../assets/images/card/pic7.jpg";
+import Product5 from "../../../../assets_old/images/card/pic5.jpg";
+import Product6 from "../../../../assets_old/images/card/pic6.jpg";
+import Product7 from "../../../../assets_old/images/card/pic7.jpg";
 
 const OrderIdDada = () => {
   const [datas, setDatas] = useState([
@@ -105,11 +105,10 @@ const OrderIdDada = () => {
                                 return (
                                   <i
                                     key={index}
-                                    className={`${
-                                      icon === 1
+                                    className={`${icon === 1
                                         ? "fa fa-star text-orange me-1"
                                         : "fa fa-star text-gray me-1"
-                                    }`}
+                                      }`}
                                   />
                                 );
                               })}

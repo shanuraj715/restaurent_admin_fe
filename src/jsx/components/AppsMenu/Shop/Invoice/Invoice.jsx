@@ -2,9 +2,9 @@ import React, { Fragment } from "react";
 import PageTitle from "../../../../layouts/PageTitle";
 
 // images
-import qrcode from "../../../../../assets/images/qr.png";
-import logo from "../../../../../assets/images/logo.png";
-import logoText from "../../../../../assets/images/logo-text.png";
+import qrcode from "../../../../../assets_old/images/qr.png";
+import logo from "../../../../../assets_old/images/logo.png";
+import logoText from "../../../../../assets_old/images/logo-text.png";
 
 
 const Invoice = () => {
@@ -49,8 +49,8 @@ const Invoice = () => {
                   <div className="row align-items-center">
                     <div className="col-sm-9">
                       <div className="brand-logo justify-content-start p-0 mb-3">
-                        <img className="logo-abbr me-2" src={logo} alt="logo"  />
-                        <img className="logo-compact" src={logoText} alt="text"  />
+                        <img className="logo-abbr me-2" src={logo} alt="logo" />
+                        <img className="logo-compact" src={logoText} alt="text" />
                       </div>
                       <span>
                         Please send exact amount:{" "}

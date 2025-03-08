@@ -3,8 +3,8 @@ import { Dropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 // Dish
-import dish_pic1 from "../../../../assets/images/dish/pic1.jpg";
-import dish_pic2 from "../../../../assets/images/dish/pic2.jpg";
+import dish_pic1 from "../../../../assets_old/images/dish/pic1.jpg";
+import dish_pic2 from "../../../../assets_old/images/dish/pic2.jpg";
 
 const DailySelling = () => {
   const [refreshToggle, setRefreshToggle] = useState(false);

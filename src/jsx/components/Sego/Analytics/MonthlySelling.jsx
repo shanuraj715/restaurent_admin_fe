@@ -3,11 +3,11 @@ import { Dropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 // Dish
-import dish_pic1 from "../../../../assets/images/dish/pic1.jpg";
-import dish_pic2 from "../../../../assets/images/dish/pic2.jpg";
-import dish_pic3 from "../../../../assets/images/dish/pic3.jpg";
-import dish_pic4 from "../../../../assets/images/dish/pic4.jpg";
-import dish_pic5 from "../../../../assets/images/dish/pic5.jpg";
+import dish_pic1 from "../../../../assets_old/images/dish/pic1.jpg";
+import dish_pic2 from "../../../../assets_old/images/dish/pic2.jpg";
+import dish_pic3 from "../../../../assets_old/images/dish/pic3.jpg";
+import dish_pic4 from "../../../../assets_old/images/dish/pic4.jpg";
+import dish_pic5 from "../../../../assets_old/images/dish/pic5.jpg";
 
 const MonthlySelling = () => {
   const [refreshToggle, setRefreshToggle] = useState(false);

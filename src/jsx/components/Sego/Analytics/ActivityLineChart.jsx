@@ -28,7 +28,7 @@ class ActivityLineChart extends React.Component {
             endingShape: "rounded",
           },
         },
-        colors: ["#EA7A9A"],
+        colors: ["#1B3358"],
         dataLabels: {
           enabled: false,
         },
@@ -42,7 +42,7 @@ class ActivityLineChart extends React.Component {
         stroke: {
           show: true,
           width: 4,
-          colors: ["#EA7A9A"],
+          colors: ["#1B3358"],
         },
 
         grid: {

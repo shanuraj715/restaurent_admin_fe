@@ -8,13 +8,13 @@ import PageTitle from '../layouts/PageTitle'
 import { Dropdown, Tab, Nav } from 'react-bootstrap'
 
 // images
-import avatar1 from '../../assets/images/avatar/1.jpg'
-import avatar2 from '../../assets/images/avatar/2.jpg'
-import avatar3 from '../../assets/images/avatar/3.jpg'
-import avatar4 from '../../assets/images/avatar/4.jpg'
-import profile from '../../assets/images/profile/profile.png'
-import bg5 from '../../assets/images/big/img5.jpg'
-import bg1 from '../../assets/images/big/img1.jpg'
+import avatar1 from '../../assets_old/images/avatar/1.jpg'
+import avatar2 from '../../assets_old/images/avatar/2.jpg'
+import avatar3 from '../../assets_old/images/avatar/3.jpg'
+import avatar4 from '../../assets_old/images/avatar/4.jpg'
+import profile from '../../assets_old/images/profile/profile.png'
+import bg5 from '../../assets_old/images/big/img5.jpg'
+import bg1 from '../../assets_old/images/big/img1.jpg'
 
 // Chart
 import { Sparklines, SparklinesLine, SparklinesBars } from 'react-sparklines'
@@ -1542,7 +1542,7 @@ const Widget = () => {
                             height='18px'
                             viewBox='0 0 24 24'
                             version='1.1'
-                            >
+                          >
                             <g
                               stroke='none'
                               strokeWidth='1'
@@ -2042,7 +2042,7 @@ const Widget = () => {
           </div>
         </div>
 
-        
+
         <div className='col-xl-3 col-xxl-4 col-lg-6 col-sm-6'>
           <div className='widget-stat card bg-primary'>
             <div className='card-header border-0 pb-0'>
@@ -2110,8 +2110,8 @@ const Widget = () => {
             </div>
           </div>
         </div>
-      
-        
+
+
         <div className='col-xl-4 col-lg-12 col-sm-12'>
           <div className='card'>
             <div className='card-header border-0 pb-0'>
@@ -2168,7 +2168,7 @@ const Widget = () => {
                 <div className='card-action mb-sm-0 my-2'>
                   <Nav className='nav nav-tabs' role='tablist'>
                     <Nav.Item className='nav-item'>
-                        <Nav.Link	className='' data-toggle='tab' to='/widget-basic' role='tab' eventKey='day'>Day</Nav.Link>
+                      <Nav.Link className='' data-toggle='tab' to='/widget-basic' role='tab' eventKey='day'>Day</Nav.Link>
                     </Nav.Item>
                     <Nav.Item className=''>
                       <Nav.Link
@@ -2256,7 +2256,7 @@ const Widget = () => {
           <div className='card active_users'>
             <div className='card-header bg-success border-0 d-block pb-0'>
               <h4 className='card-title text-white'>Active Users</h4>
-               <LiveBar />
+              <LiveBar />
             </div>
             <div className='card-body pt-0'>
               <div className='list-group-flush mt-4'>
@@ -2315,7 +2315,7 @@ const Widget = () => {
                 <span className='mb-0'>Years Old</span>{' '}
                 <strong className='text-muted'>Age: 24 </strong>
               </li>
-              
+
             </ul>
             <div className='card-footer border-0 mt-0'>
               <button className='btn btn-primary btn-lg btn-block'>
@@ -2326,278 +2326,278 @@ const Widget = () => {
         </div>
       </div>
       <div className='row'>
-          <div className='col-xl-12 col-lg-12 col-xxl-12 col-sm-12'>
-            <div className='card'>
-              <div className='card-header'>
-                <h4 className='card-title'>Recent Payments Queue</h4>
-              </div>
-              <div className='card-body'>
-                <div className='table-responsive recentOrderTable'>
-                  <table className='table verticle-middle table-responsive-md'>
-                    <thead>
-                      <tr>
-                        <th scope='col'>Ward No.</th>
-                        <th scope='col'>Patient</th>
-                        <th scope='col'>Dr Name</th>
-                        <th scope='col'>Date</th>
-                        <th scope='col'>Status</th>
-                        <th scope='col'>Bills</th>
-                        <th scope='col'>Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>12</td>
-                        <td>Mr. Bobby</td>
-                        <td>Dr. Jackson</td>
-                        <td>01 August 2020</td>
-                        <td>
-                          <span className='badge badge-rounded badge-primary text-white'>
-                            Checkin
-                          </span>
-                        </td>
-                        <td>$120</td>
-                        <td>
-                          <Dropdown className='dropdown custom-dropdown mb-0'>
-                            <Dropdown.Toggle
-                              className='btn sharp btn-primary tp-btn i-false'
-                              data-toggle='dropdown'
+        <div className='col-xl-12 col-lg-12 col-xxl-12 col-sm-12'>
+          <div className='card'>
+            <div className='card-header'>
+              <h4 className='card-title'>Recent Payments Queue</h4>
+            </div>
+            <div className='card-body'>
+              <div className='table-responsive recentOrderTable'>
+                <table className='table verticle-middle table-responsive-md'>
+                  <thead>
+                    <tr>
+                      <th scope='col'>Ward No.</th>
+                      <th scope='col'>Patient</th>
+                      <th scope='col'>Dr Name</th>
+                      <th scope='col'>Date</th>
+                      <th scope='col'>Status</th>
+                      <th scope='col'>Bills</th>
+                      <th scope='col'>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>12</td>
+                      <td>Mr. Bobby</td>
+                      <td>Dr. Jackson</td>
+                      <td>01 August 2020</td>
+                      <td>
+                        <span className='badge badge-rounded badge-primary text-white'>
+                          Checkin
+                        </span>
+                      </td>
+                      <td>$120</td>
+                      <td>
+                        <Dropdown className='dropdown custom-dropdown mb-0'>
+                          <Dropdown.Toggle
+                            className='btn sharp btn-primary tp-btn i-false'
+                            data-toggle='dropdown'
+                          >
+                            <svg
+                              xmlns='http://www.w3.org/2000/svg'
+                              xmlnsXlink='http://www.w3.org/1999/xlink'
+                              width='18px'
+                              height='18px'
+                              viewBox='0 0 24 24'
+                              version='1.1'
                             >
-                              <svg
-                                xmlns='http://www.w3.org/2000/svg'
-                                xmlnsXlink='http://www.w3.org/1999/xlink'
-                                width='18px'
-                                height='18px'
-                                viewBox='0 0 24 24'
-                                version='1.1'
+                              <g
+                                stroke='none'
+                                strokeWidth='1'
+                                fill='none'
+                                fillRule='evenodd'
                               >
-                                <g
-                                  stroke='none'
-                                  strokeWidth='1'
-                                  fill='none'
-                                  fillRule='evenodd'
-                                >
-                                  <rect x='0' y='0' width={24} height={24} />
-                                  <circle fill='#000000' cx='12' cy='5' r='2' />
-                                  <circle fill='#000000' cx='12' cy='12' r='2' />
-                                  <circle fill='#000000' cx='12' cy='19' r='2' />
-                                </g>
-                              </svg>
-                            </Dropdown.Toggle>
-                            <Dropdown.Menu className='dropdown-menu dropdown-menu-right'>
-                              <Dropdown.Item className='dropdown-item'>
-                                Details
-                              </Dropdown.Item>
-                              <Dropdown.Item className='dropdown-item text-danger'>
-                                Cancel
-                              </Dropdown.Item>
-                            </Dropdown.Menu>
-                          </Dropdown>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>10 </td>
-                        <td>Mr. Dexter</td>
-                        <td>Dr. Charles</td>
-                        <td>31 July 2020</td>
-                        <td>
-                          <span className='badge badge-rounded badge-warning'>
-                            Panding
-                          </span>
-                        </td>
-                        <td>$540</td>
-                        <td>
-                          <Dropdown className='dropdown custom-dropdown mb-0'>
-                            <Dropdown.Toggle
-                              className='btn sharp btn-primary tp-btn i-false'
-                              data-toggle='dropdown'
+                                <rect x='0' y='0' width={24} height={24} />
+                                <circle fill='#000000' cx='12' cy='5' r='2' />
+                                <circle fill='#000000' cx='12' cy='12' r='2' />
+                                <circle fill='#000000' cx='12' cy='19' r='2' />
+                              </g>
+                            </svg>
+                          </Dropdown.Toggle>
+                          <Dropdown.Menu className='dropdown-menu dropdown-menu-right'>
+                            <Dropdown.Item className='dropdown-item'>
+                              Details
+                            </Dropdown.Item>
+                            <Dropdown.Item className='dropdown-item text-danger'>
+                              Cancel
+                            </Dropdown.Item>
+                          </Dropdown.Menu>
+                        </Dropdown>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>10 </td>
+                      <td>Mr. Dexter</td>
+                      <td>Dr. Charles</td>
+                      <td>31 July 2020</td>
+                      <td>
+                        <span className='badge badge-rounded badge-warning'>
+                          Panding
+                        </span>
+                      </td>
+                      <td>$540</td>
+                      <td>
+                        <Dropdown className='dropdown custom-dropdown mb-0'>
+                          <Dropdown.Toggle
+                            className='btn sharp btn-primary tp-btn i-false'
+                            data-toggle='dropdown'
+                          >
+                            <svg
+                              xmlns='http://www.w3.org/2000/svg'
+                              xmlnsXlink='http://www.w3.org/1999/xlink'
+                              width='18px'
+                              height='18px'
+                              viewBox='0 0 24 24'
+                              version='1.1'
                             >
-                              <svg
-                                xmlns='http://www.w3.org/2000/svg'
-                                xmlnsXlink='http://www.w3.org/1999/xlink'
-                                width='18px'
-                                height='18px'
-                                viewBox='0 0 24 24'
-                                version='1.1'
+                              <g
+                                stroke='none'
+                                strokeWidth='1'
+                                fill='none'
+                                fillRule='evenodd'
                               >
-                                <g
-                                  stroke='none'
-                                  strokeWidth='1'
-                                  fill='none'
-                                  fillRule='evenodd'
-                                >
-                                  <rect x='0' y='0' width={24} height={24} />
-                                  <circle fill='#000000' cx='12' cy='5' r='2' />
-                                  <circle fill='#000000' cx='12' cy='12' r='2' />
-                                  <circle fill='#000000' cx='12' cy='19' r='2' />
-                                </g>
-                              </svg>
-                            </Dropdown.Toggle>
-                            <Dropdown.Menu className='dropdown-menu dropdown-menu-right'>
-                              <Dropdown.Item className='dropdown-item'>
-                                Details
-                              </Dropdown.Item>
-                              <Dropdown.Item className='dropdown-item text-danger'>
-                                Cancel
-                              </Dropdown.Item>
-                            </Dropdown.Menu>
-                          </Dropdown>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>03 </td>
-                        <td>Mr. Nathan</td>
-                        <td>Dr. Frederick</td>
-                        <td>30 July 2020</td>
-                        <td>
-                          <span className='badge badge-rounded badge-danger'>
-                            Canceled
-                          </span>
-                        </td>
-                        <td>$301</td>
-                        <td>
-                          <Dropdown className='dropdown custom-dropdown mb-0'>
-                            <Dropdown.Toggle
-                              className='btn sharp btn-primary tp-btn i-false'
-                              data-toggle='dropdown'
+                                <rect x='0' y='0' width={24} height={24} />
+                                <circle fill='#000000' cx='12' cy='5' r='2' />
+                                <circle fill='#000000' cx='12' cy='12' r='2' />
+                                <circle fill='#000000' cx='12' cy='19' r='2' />
+                              </g>
+                            </svg>
+                          </Dropdown.Toggle>
+                          <Dropdown.Menu className='dropdown-menu dropdown-menu-right'>
+                            <Dropdown.Item className='dropdown-item'>
+                              Details
+                            </Dropdown.Item>
+                            <Dropdown.Item className='dropdown-item text-danger'>
+                              Cancel
+                            </Dropdown.Item>
+                          </Dropdown.Menu>
+                        </Dropdown>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>03 </td>
+                      <td>Mr. Nathan</td>
+                      <td>Dr. Frederick</td>
+                      <td>30 July 2020</td>
+                      <td>
+                        <span className='badge badge-rounded badge-danger'>
+                          Canceled
+                        </span>
+                      </td>
+                      <td>$301</td>
+                      <td>
+                        <Dropdown className='dropdown custom-dropdown mb-0'>
+                          <Dropdown.Toggle
+                            className='btn sharp btn-primary tp-btn i-false'
+                            data-toggle='dropdown'
+                          >
+                            <svg
+                              xmlns='http://www.w3.org/2000/svg'
+                              xmlnsXlink='http://www.w3.org/1999/xlink'
+                              width='18px'
+                              height='18px'
+                              viewBox='0 0 24 24'
+                              version='1.1'
                             >
-                              <svg
-                                xmlns='http://www.w3.org/2000/svg'
-                                xmlnsXlink='http://www.w3.org/1999/xlink'
-                                width='18px'
-                                height='18px'
-                                viewBox='0 0 24 24'
-                                version='1.1'
+                              <g
+                                stroke='none'
+                                strokeWidth='1'
+                                fill='none'
+                                fillRule='evenodd'
                               >
-                                <g
-                                  stroke='none'
-                                  strokeWidth='1'
-                                  fill='none'
-                                  fillRule='evenodd'
-                                >
-                                  <rect x='0' y='0' width={24} height={24} />
-                                  <circle fill='#000000' cx='12' cy='5' r='2' />
-                                  <circle fill='#000000' cx='12' cy='12' r='2' />
-                                  <circle fill='#000000' cx='12' cy='19' r='2' />
-                                </g>
-                              </svg>
-                            </Dropdown.Toggle>
-                            <Dropdown.Menu className='dropdown-menu dropdown-menu-right'>
-                              <Dropdown.Item className='dropdown-item'>
-                                Details
-                              </Dropdown.Item>
-                              <Dropdown.Item className='dropdown-item text-danger'>
-                                Cancel
-                              </Dropdown.Item>
-                            </Dropdown.Menu>
-                          </Dropdown>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>05</td>
-                        <td>Mr. Aurora</td>
-                        <td>Dr. Roman</td>
-                        <td>29 July 2020</td>
-                        <td>
-                          <span className='badge badge-rounded badge-success'>
-                            Checkin
-                          </span>
-                        </td>
-                        <td>$099</td>
-                        <td>
-                          <Dropdown className='dropdown custom-dropdown mb-0'>
-                            <Dropdown.Toggle
-                              className='btn sharp btn-primary tp-btn i-false'
-                              data-toggle='dropdown'
+                                <rect x='0' y='0' width={24} height={24} />
+                                <circle fill='#000000' cx='12' cy='5' r='2' />
+                                <circle fill='#000000' cx='12' cy='12' r='2' />
+                                <circle fill='#000000' cx='12' cy='19' r='2' />
+                              </g>
+                            </svg>
+                          </Dropdown.Toggle>
+                          <Dropdown.Menu className='dropdown-menu dropdown-menu-right'>
+                            <Dropdown.Item className='dropdown-item'>
+                              Details
+                            </Dropdown.Item>
+                            <Dropdown.Item className='dropdown-item text-danger'>
+                              Cancel
+                            </Dropdown.Item>
+                          </Dropdown.Menu>
+                        </Dropdown>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>05</td>
+                      <td>Mr. Aurora</td>
+                      <td>Dr. Roman</td>
+                      <td>29 July 2020</td>
+                      <td>
+                        <span className='badge badge-rounded badge-success'>
+                          Checkin
+                        </span>
+                      </td>
+                      <td>$099</td>
+                      <td>
+                        <Dropdown className='dropdown custom-dropdown mb-0'>
+                          <Dropdown.Toggle
+                            className='btn sharp btn-primary tp-btn i-false'
+                            data-toggle='dropdown'
+                          >
+                            <svg
+                              xmlns='http://www.w3.org/2000/svg'
+                              xmlnsXlink='http://www.w3.org/1999/xlink'
+                              width='18px'
+                              height='18px'
+                              viewBox='0 0 24 24'
+                              version='1.1'
                             >
-                              <svg
-                                xmlns='http://www.w3.org/2000/svg'
-                                xmlnsXlink='http://www.w3.org/1999/xlink'
-                                width='18px'
-                                height='18px'
-                                viewBox='0 0 24 24'
-                                version='1.1'
+                              <g
+                                stroke='none'
+                                strokeWidth='1'
+                                fill='none'
+                                fillRule='evenodd'
                               >
-                                <g
-                                  stroke='none'
-                                  strokeWidth='1'
-                                  fill='none'
-                                  fillRule='evenodd'
-                                >
-                                  <rect x='0' y='0' width={24} height={24} />
-                                  <circle fill='#000000' cx='12' cy='5' r='2' />
-                                  <circle fill='#000000' cx='12' cy='12' r='2' />
-                                  <circle fill='#000000' cx='12' cy='19' r='2' />
-                                </g>
-                              </svg>
-                            </Dropdown.Toggle>
-                            <Dropdown.Menu className='dropdown-menu dropdown-menu-right'>
-                              <Dropdown.Item className='dropdown-item'>
-                                Details
-                              </Dropdown.Item>
-                              <Dropdown.Item className='dropdown-item text-danger'>
-                                Cancel
-                              </Dropdown.Item>
-                            </Dropdown.Menu>
-                          </Dropdown>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>06</td>
-                        <td>Mr. Matthew</td>
-                        <td>Dr. Samantha</td>
-                        <td>28 July 2020</td>
-                        <td>
-                          <span className='badge badge-rounded badge-success'>
-                            Checkin
-                          </span>
-                        </td>
-                        <td>$520</td>
-                        <td>
-                          <Dropdown className='dropdown custom-dropdown mb-0'>
-                            <Dropdown.Toggle
-                              className='btn sharp btn-primary tp-btn i-false'
-                              data-toggle='dropdown'
+                                <rect x='0' y='0' width={24} height={24} />
+                                <circle fill='#000000' cx='12' cy='5' r='2' />
+                                <circle fill='#000000' cx='12' cy='12' r='2' />
+                                <circle fill='#000000' cx='12' cy='19' r='2' />
+                              </g>
+                            </svg>
+                          </Dropdown.Toggle>
+                          <Dropdown.Menu className='dropdown-menu dropdown-menu-right'>
+                            <Dropdown.Item className='dropdown-item'>
+                              Details
+                            </Dropdown.Item>
+                            <Dropdown.Item className='dropdown-item text-danger'>
+                              Cancel
+                            </Dropdown.Item>
+                          </Dropdown.Menu>
+                        </Dropdown>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>06</td>
+                      <td>Mr. Matthew</td>
+                      <td>Dr. Samantha</td>
+                      <td>28 July 2020</td>
+                      <td>
+                        <span className='badge badge-rounded badge-success'>
+                          Checkin
+                        </span>
+                      </td>
+                      <td>$520</td>
+                      <td>
+                        <Dropdown className='dropdown custom-dropdown mb-0'>
+                          <Dropdown.Toggle
+                            className='btn sharp btn-primary tp-btn i-false'
+                            data-toggle='dropdown'
+                          >
+                            <svg
+                              xmlns='http://www.w3.org/2000/svg'
+                              xmlnsXlink='http://www.w3.org/1999/xlink'
+                              width='18px'
+                              height='18px'
+                              viewBox='0 0 24 24'
+                              version='1.1'
                             >
-                              <svg
-                                xmlns='http://www.w3.org/2000/svg'
-                                xmlnsXlink='http://www.w3.org/1999/xlink'
-                                width='18px'
-                                height='18px'
-                                viewBox='0 0 24 24'
-                                version='1.1'
+                              <g
+                                stroke='none'
+                                strokeWidth='1'
+                                fill='none'
+                                fillRule='evenodd'
                               >
-                                <g
-                                  stroke='none'
-                                  strokeWidth='1'
-                                  fill='none'
-                                  fillRule='evenodd'
-                                >
-                                  <rect x='0' y='0' width={24} height={24} />
-                                  <circle fill='#000000' cx='12' cy='5' r='2' />
-                                  <circle fill='#000000' cx='12' cy='12' r='2' />
-                                  <circle fill='#000000' cx='12' cy='19' r='2' />
-                                </g>
-                              </svg>
-                            </Dropdown.Toggle>
-                            <Dropdown.Menu className='dropdown-menu dropdown-menu-right'>
-                              <Dropdown.Item className='dropdown-item'>
-                                Details
-                              </Dropdown.Item>
-                              <Dropdown.Item className='dropdown-item text-danger'>
-                                Cancel
-                              </Dropdown.Item>
-                            </Dropdown.Menu>
-                          </Dropdown>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                                <rect x='0' y='0' width={24} height={24} />
+                                <circle fill='#000000' cx='12' cy='5' r='2' />
+                                <circle fill='#000000' cx='12' cy='12' r='2' />
+                                <circle fill='#000000' cx='12' cy='19' r='2' />
+                              </g>
+                            </svg>
+                          </Dropdown.Toggle>
+                          <Dropdown.Menu className='dropdown-menu dropdown-menu-right'>
+                            <Dropdown.Item className='dropdown-item'>
+                              Details
+                            </Dropdown.Item>
+                            <Dropdown.Item className='dropdown-item text-danger'>
+                              Cancel
+                            </Dropdown.Item>
+                          </Dropdown.Menu>
+                        </Dropdown>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
-        </div>  
+        </div>
+      </div>
       <div className='row'>
         <div className='col-xl-4 col-lg-6 col-xxl-4 col-sm-6'>
           <div className='card text-white bg-primary '>
@@ -2731,7 +2731,7 @@ const Widget = () => {
                           height: "100px"
                         }}
                       >
-                        <SparklinesBars style={{ fill: '#ea7a9a' }} />
+                        <SparklinesBars style={{ fill: '#1B3358' }} />
                       </Sparklines>
                     </div>
                   </div>
@@ -2882,7 +2882,7 @@ const Widget = () => {
             </div>
           </div>
         </div>
-        
+
         <div className='col-xl-6 col-lg-12 col-xxl-4 col-sm-12'>
           <div className='card'>
             <div className='card-body'>
@@ -2901,88 +2901,88 @@ const Widget = () => {
           </div>
         </div>
       </div>
-	  <div className="row">
-		  <div className='col-xl-12 col-xxl-12'>
-			<div className='row'>
-			  <div className='col-md-6'>
-          <div className='card'>
-            <div className='card-body pb-0'>
-            <div className='row justify-content-between'>
-              <div className='col-auto'>
-              <h5>Lorem Ipsum</h5>
-              </div>
-              <div className='col-auto'>
-              <h5>
-                <span>
-                <i className='fa fa-caret-up'></i>
-                </span>
-                <span>2,250</span>
-              </h5>
+      <div className="row">
+        <div className='col-xl-12 col-xxl-12'>
+          <div className='row'>
+            <div className='col-md-6'>
+              <div className='card'>
+                <div className='card-body pb-0'>
+                  <div className='row justify-content-between'>
+                    <div className='col-auto'>
+                      <h5>Lorem Ipsum</h5>
+                    </div>
+                    <div className='col-auto'>
+                      <h5>
+                        <span>
+                          <i className='fa fa-caret-up'></i>
+                        </span>
+                        <span>2,250</span>
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+                <div className='chart-wrapper'>
+                  <LineChart4 color='#1B3358' />
+                </div>
+                <div className='card-footer'>
+                  <div className='row'>
+                    <div className='col text-center'>
+                      <h5 className='font-weight-normal'>1230</h5>
+                      <span>Type A</span>
+                    </div>
+                    <div className='col text-center'>
+                      <h5 className='font-weight-normal'>1230</h5>
+                      <span>Type A</span>
+                    </div>
+                    <div className='col text-center'>
+                      <h5 className='font-weight-normal'>1230</h5>
+                      <span>Type A</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            </div>
-            <div className='chart-wrapper'>
-              <LineChart4 color='#EA7A9A'/>
-            </div>
-            <div className='card-footer'>
-            <div className='row'>
-              <div className='col text-center'>
-              <h5 className='font-weight-normal'>1230</h5>
-              <span>Type A</span>
+            <div className='col-md-6'>
+              <div className='card'>
+                <div className='card-body pb-0'>
+                  <div className='row justify-content-between'>
+                    <div className='col-auto'>
+                      <h5>Lorem Ipsum</h5>
+                    </div>
+                    <div className='col-auto'>
+                      <h5>
+                        <span>
+                          <i className='fa fa-caret-up'></i>
+                        </span>
+                        <span>2,250</span>
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+                <div className='chart-wrapper'>
+                  <BarChartNoPadding />
+                </div>
+                <div className='card-footer'>
+                  <div className='row'>
+                    <div className='col text-center'>
+                      <h5 className='font-weight-normal'>1230</h5>
+                      <span>Type A</span>
+                    </div>
+                    <div className='col text-center'>
+                      <h5 className='font-weight-normal'>1230</h5>
+                      <span>Type A</span>
+                    </div>
+                    <div className='col text-center'>
+                      <h5 className='font-weight-normal'>1230</h5>
+                      <span>Type A</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className='col text-center'>
-              <h5 className='font-weight-normal'>1230</h5>
-              <span>Type A</span>
-              </div>
-              <div className='col text-center'>
-              <h5 className='font-weight-normal'>1230</h5>
-              <span>Type A</span>
-              </div>
-            </div>
             </div>
           </div>
-			  </div>
-			  <div className='col-md-6'>
-				<div className='card'>
-				  <div className='card-body pb-0'>
-					<div className='row justify-content-between'>
-					  <div className='col-auto'>
-						<h5>Lorem Ipsum</h5>
-					  </div>
-					  <div className='col-auto'>
-						<h5>
-						  <span>
-							<i className='fa fa-caret-up'></i>
-						  </span>
-						  <span>2,250</span>
-						</h5>
-					  </div>
-					</div>
-				  </div>
-				  <div className='chart-wrapper'>
-					  <BarChartNoPadding />
-				  </div>
-				  <div className='card-footer'>
-					<div className='row'>
-					  <div className='col text-center'>
-						<h5 className='font-weight-normal'>1230</h5>
-						<span>Type A</span>
-					  </div>
-					  <div className='col text-center'>
-						<h5 className='font-weight-normal'>1230</h5>
-						<span>Type A</span>
-					  </div>
-					  <div className='col text-center'>
-						<h5 className='font-weight-normal'>1230</h5>
-						<span>Type A</span>
-					  </div>
-					</div>
-				  </div>
-				</div>
-			  </div>
-			</div>
-		  </div>
-		</div>  
+        </div>
+      </div>
       <div className='row'>
         {' '}
         <div className='col-xl-6 col-lg-6'>
@@ -3110,7 +3110,7 @@ const Widget = () => {
                           <Dropdown.Item
                             className='dropdown-item'
                             to='/widget-basic'
-							
+
                           >
                             Edit
                           </Dropdown.Item>
@@ -3188,7 +3188,7 @@ const Widget = () => {
                       <Dropdown className='dropdown'>
                         <Dropdown.Toggle
                           variant='primary light'
-						              as="div"
+                          as="div"
                           className='i-false btn btn-success light sharp'
                         >
                           <svg
@@ -3309,7 +3309,7 @@ const Widget = () => {
                       <Dropdown className='dropdown'>
                         <Dropdown.Toggle
                           variant='primary light'
-						  as="div"
+                          as="div"
                           className='i-false btn btn-info light sharp'
                         >
                           <svg
@@ -3361,7 +3361,7 @@ const Widget = () => {
                       </div>
                       <Dropdown className='dropdown'>
                         <Dropdown.Toggle
-							as="div"
+                          as="div"
                           variant='primary light'
                           className='i-false btn btn-success light sharp'
                         >
@@ -3455,7 +3455,7 @@ const Widget = () => {
                   <p>All Sales</p>
                 </div>
                 <div className='chart-wrapper'>
-                  <AllSell2 /> 
+                  <AllSell2 />
                 </div>
               </div>
             </div>

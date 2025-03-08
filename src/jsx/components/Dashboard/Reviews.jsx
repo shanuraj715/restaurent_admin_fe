@@ -2,17 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Dropdown, Nav, Tab } from "react-bootstrap";
 //** Import Image */
-import avatar1 from "../../../assets/images/avatar/1.jpg";
-import avatar2 from "../../../assets/images/avatar/2.jpg";
-import avatar3 from "../../../assets/images/avatar/3.jpg";
-import avatar4 from "../../../assets/images/avatar/4.jpg";
-import avatar5 from "../../../assets/images/avatar/5.jpg";
+import avatar1 from "../../../assets_old/images/avatar/1.jpg";
+import avatar2 from "../../../assets_old/images/avatar/2.jpg";
+import avatar3 from "../../../assets_old/images/avatar/3.jpg";
+import avatar4 from "../../../assets_old/images/avatar/4.jpg";
+import avatar5 from "../../../assets_old/images/avatar/5.jpg";
 import ReviewSlider from "../Sego/Revirew/ReviewSlider";
 
 function Reviews() {
   return (
     <>
-      
+
       <Tab.Container defaultActiveKey="all">
         <div className="d-sm-flex d-block align-items-end">
           <div className="card-action card-tabs mb-sm-4 mb-3 me-auto">
@@ -428,7 +428,7 @@ function Reviews() {
                             type="button"
                             className="i-false btn btn-primary dropdown-toggle light fs-14"
                             data-toggle="dropdown"
-                            
+
                           >
                             Latest
                           </Dropdown.Toggle>
@@ -679,7 +679,7 @@ function Reviews() {
                             type="button"
                             className="i-false btn btn-primary dropdown-toggle light fs-14"
                             data-toggle="dropdown"
-                            
+
                           >
                             Latest
                           </Dropdown.Toggle>

@@ -12,9 +12,9 @@ import {
 } from "react-bootstrap";
 
 /// imge
-import avatar1 from "../../../assets/images/avatar/1.jpg";
-import avatar2 from "../../../assets/images/avatar/2.jpg";
-import avatar3 from "../../../assets/images/avatar/3.jpg";
+import avatar1 from "../../../assets_old/images/avatar/1.jpg";
+import avatar2 from "../../../assets_old/images/avatar/2.jpg";
+import avatar3 from "../../../assets_old/images/avatar/3.jpg";
 import { Link } from "react-router-dom";
 
 const BootstrapTable = () => {
@@ -29,9 +29,9 @@ const BootstrapTable = () => {
     </svg>
   );
   // Normal page
- /*  const [data, setData] = useState(
-    document.querySelectorAll(".custom-checkbox")
-  ); */
+  /*  const [data, setData] = useState(
+     document.querySelectorAll(".custom-checkbox")
+   ); */
   const [test, settest] = useState(false);
   // use effect
   useEffect(() => {
@@ -96,7 +96,7 @@ const BootstrapTable = () => {
                     </th>
                     <th>
                       <strong>ACTION</strong>
-                    </th>                    
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
