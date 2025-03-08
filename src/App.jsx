@@ -2,7 +2,6 @@ import { lazy, Suspense, useEffect } from 'react';
 
 /// Components
 import Index from "./jsx";
-import { Helmet } from "react-helmet";
 import { connect, useDispatch, useSelector } from 'react-redux';
 import { Route, Routes, useLocation, useNavigate, useParams } from 'react-router-dom';
 // action
@@ -11,6 +10,7 @@ import { isAuthenticated } from './store/selectors/AuthSelectors';
 /// Style
 
 import "./assets/css/style.css";
+import "react-toastify/dist/ReactToastify.css";
 
 const SignUp = lazy(() => import('./jsx/_pages/Registration'));
 // const ForgotPassword = lazy(() => import('./jsx/_pages/ForgotPassword'));
@@ -48,7 +48,7 @@ function App(props) {
   }, []);
 
   useEffect(() => {
-    document.title = pageData.pageTitle;
+    document.title = `${pageData.pageTitle} | ${import.meta.env.VITE_SHORT_APP_NAME}`;
   }, [pageData.pageTitle])
 
 
@@ -74,7 +74,7 @@ function App(props) {
           </div>
         }
         >
-          <Index userType={'normal'} />
+          <Index userType={'admin'} />
         </Suspense>
       </>
     );
@@ -93,10 +93,6 @@ function App(props) {
         }
         >
           {routeblog}
-          {/* <Helmet>
-            {console.log(pageData)}
-            <title>{pageData.pageTitle}</title>
-          </Helmet> */}
         </Suspense>
       </div>
     );

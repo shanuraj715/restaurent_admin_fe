@@ -1,7 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { updatePageTitle } from '../../store/actions/PageData'
+import CONSTANTS from '../../constants'
 
 const Error404 = () => {
+
+  const dispatch = useDispatch()
+
+  React.useEffect(() => {
+    dispatch(updatePageTitle(CONSTANTS.PAGE_TITLES.page404))
+  }, [])
+
   return (
     <div className='py-4'>
       <div className='container'>

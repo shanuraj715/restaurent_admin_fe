@@ -29,7 +29,7 @@ const SideBar = () => {
   }
 
   const [hideOnScroll, setHideOnScroll] = useState(true)
-  const MenuList = getMenu("user");
+  const MenuList = getMenu("admin");
   useScrollPosition(
     ({ prevPos, currPos }) => {
       const isShow = currPos.y > prevPos.y

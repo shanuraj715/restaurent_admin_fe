@@ -11,7 +11,11 @@ CONSTANTS.PAGE_TITLES = {
     add_member: "Add Member",
     manage_members: "Manage Members",
     feedback_reviews: "Feedback & Reviews",
-    queries_tickets: "Queries & Tickets"
+    queries_tickets: "Queries & Tickets",
+
+
+
+    page404: "Page Not Found"
 }
 
 export default CONSTANTS;

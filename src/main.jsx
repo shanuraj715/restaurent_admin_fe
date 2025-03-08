@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import { store } from './store/store';
 import ThemeContext from "./context/ThemeContext.jsx";
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById('app_by_ShanuTheWebDev.in')).render(
   <StrictMode>
     <Provider store={store}>
       <BrowserRouter basename='/'>

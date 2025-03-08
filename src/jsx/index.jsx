@@ -2,10 +2,12 @@ import React, { useState } from 'react'
 /// React router dom
 import { Routes, Route, Outlet } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
+import { ToastContainer } from 'react-toastify';
 /// Css
 import './index.css'
 import './chart.css'
 import './step.css'
+import './mystyles.scss'
 
 /// Layout
 import Nav from './layouts/nav'
@@ -135,7 +137,7 @@ import ChartJs from './components/charts/Chartjs'
 // import LockScreen from './pages/LockScreen'
 // import Error400 from './pages/Error400'
 // import Error403 from './pages/Error403'
-import Error404 from './_pages/Error404'
+import Error404 from './pages/Error404'
 // import Error500 from './pages/Error500'
 // import Error503 from './pages/Error503'
 // import Todo from './pages/Todo';
@@ -242,6 +244,7 @@ const Markup = ({ userType }) => {
   // ]
 
   const adminRoutes = [
+    { url: '/', component: <Dashboard_Home /> },
     { url: '/dashboard', component: <Dashboard_Home /> },
     { url: '/orders', component: <DASHBOARD_ORDERS /> },
     { url: '/category/manage', component: <Category /> },
@@ -256,6 +259,7 @@ const Markup = ({ userType }) => {
   ]
 
   const normalRoutes = [
+    { url: '/', component: <Dashboard_Home /> },
     { url: '/dashboard', component: <Dashboard_Home /> },
     { url: '/orders', component: <DASHBOARD_ORDERS /> },
     // { url: '/category/manage', component: <Category /> },
@@ -312,6 +316,7 @@ function MainLayout() {
         </div>
       </div>
       <Footer />
+      <ToastContainer position='top-right' closeOnClick={true} autoClose={3000} pauseOnHover={true} />
       {appState.loader && <Loader />}
     </div>
   )

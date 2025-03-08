@@ -76,9 +76,75 @@ function compareArrays(arr1, arr2) {
     return true;
 }
 
+const withRupeeSign = (number) => {
+    return `₹ ${number}`
+}
+
+const increaseAmountWithFixedPercentWithRounding = (amount, percent) => {
+    // return amount with adding the percent in the amount and round the amount with hundred placenemts.
+    return Math.round(amount + (amount * percent / 100))
+
+}
+
+const limitCharcaterLength = (string, limit, addEllipsis = true) => {
+    if (string.length > limit) {
+        return addEllipsis ? `${string.substring(0, limit)}...` : string.substring(0, limit)
+    }
+    return string;
+}
+
+const timestampToTimeandTodayYesterday = (timestamp) => {
+    // return time if the timestamp is today or yesterday else return date.
+    const date = new Date(timestamp);
+    const copyDate = new Date(timestamp);
+    const today = new Date();
+    copyDate.setHours(0, 0, 0, 0)
+    today.setHours(0, 0, 0, 0)
+    const diff = today.getDate() - copyDate.getDate()
+    // console.log(copyDate.getDate(), today.getHours(), diff)
+    if (diff === 0) {
+        return `${String(date.getHours()).padStart(2, 0)}:${String(date.getMinutes()).padStart(2, 0)}`;
+    }
+    if (diff === 1) {
+        return `${String(date.getHours()).padStart(2, 0)}:${String(date.getMinutes()).padStart(2, 0)} / Y`;
+    }
+    return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
+}
+
+const timeModifier = (time = '13:59:12', modifier = 'hh:mm', separator = ':', returnInAmPm) => {
+    // timeModifier('13:59:12', 'hh:mm', ':') => 13:59
+    // timeModifier('13:59:12', 'hh:mm:ss', ':') => 13:59:12
+    // timeModifier('13:59:12', 'hh:mm:ss', '-') => 13-59-12
+    const splitted = time.split(':');
+    if (splitted.length < 3) {
+        return "Invalid time";
+    }
+    let [hours, minutes, seconds] = time.split(':');
+    hours = returnInAmPm ? hours % 12 : hours;
+    switch (modifier) {
+        case 'hh':
+            return `${hours}${returnInAmPm ? hours >= 12 ? ' PM' : ' AM' : ''}`;
+        case 'mm':
+            return `${minutes}`;
+        case 'ss':
+            return `${seconds}`;
+        case 'hh:mm':
+            return `${hours}${separator}${minutes}`;
+        case 'hh:mm:ss':
+            return `${hours}${separator}${minutes}${separator}${seconds}${returnInAmPm ? hours >= 12 ? ' PM' : ' AM' : ''}`;
+        default:
+            return `${hours}${separator}${minutes}${returnInAmPm ? hours >= 12 ? ' PM' : ' AM' : ''}`;
+    }
+}
+
 export default {
     typeChecker,
     stringChecker,
     random,
-    compareArrays
+    compareArrays,
+    withRupeeSign,
+    increaseAmountWithFixedPercentWithRounding,
+    limitCharcaterLength,
+    timestampToTimeandTodayYesterday,
+    timeModifier
 }
