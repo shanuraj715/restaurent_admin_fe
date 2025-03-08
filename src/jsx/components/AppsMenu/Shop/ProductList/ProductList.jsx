@@ -4,13 +4,13 @@ import { Modal } from "react-bootstrap";
 import PageTitle from "../../../../layouts/PageTitle";
 
 // images
-import avatar1 from "../../../../../assets_old/images/avatar/1.jpg";
-import product2 from "../../../../../assets_old/images/product/2.jpg";
-import product3 from "../../../../../assets_old/images/product/3.jpg";
-import product4 from "../../../../../assets_old/images/product/4.jpg";
-import product5 from "../../../../../assets_old/images/product/5.jpg";
-import product6 from "../../../../../assets_old/images/product/6.jpg";
-import product7 from "../../../../../assets_old/images/product/7.jpg";
+import avatar1 from "../../../../../assets/images/avatar/1.jpg";
+import product2 from "../../../../../assets/images/product/2.jpg";
+import product3 from "../../../../../assets/images/product/3.jpg";
+import product4 from "../../../../../assets/images/product/4.jpg";
+import product5 from "../../../../../assets/images/product/5.jpg";
+import product6 from "../../../../../assets/images/product/6.jpg";
+import product7 from "../../../../../assets/images/product/7.jpg";
 
 const ProductList = () => {
   const [star, setStar] = useState(4);

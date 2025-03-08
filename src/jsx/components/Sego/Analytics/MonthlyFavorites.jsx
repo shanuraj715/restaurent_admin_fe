@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 //Images
-import dish_pic6 from "../../../../assets_old/images/dish/pic6.jpg";
-import dish_pic7 from "../../../../assets_old/images/dish/pic7.jpg";
-import dish_pic8 from "../../../../assets_old/images/dish/pic8.jpg";
-import dish_pic9 from "../../../../assets_old/images/dish/pic9.jpg";
+import dish_pic6 from "../../../../assets/images/dish/pic6.jpg";
+import dish_pic7 from "../../../../assets/images/dish/pic7.jpg";
+import dish_pic8 from "../../../../assets/images/dish/pic8.jpg";
+import dish_pic9 from "../../../../assets/images/dish/pic9.jpg";
 
 const MonthlyFavorites = () => {
   const [refreshToggle, setRefreshToggle] = useState(false);

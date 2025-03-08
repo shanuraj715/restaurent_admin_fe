@@ -4,8 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // Slider Image
-import avatar1 from "../../../../assets_old/images/avatar/1.jpg";
-import avatar2 from "../../../../assets_old/images/avatar/2.jpg";
+import avatar1 from "../../../../assets/images/avatar/1.jpg";
+import avatar2 from "../../../../assets/images/avatar/2.jpg";
 
 const ReviewSlider = () => {
   const [asd, setAsd] = useState();

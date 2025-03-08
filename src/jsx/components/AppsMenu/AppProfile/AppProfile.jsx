@@ -11,16 +11,16 @@ import lgZoom from 'lightgallery/plugins/zoom';
 
 //** Import Image */
 //** Import Image */
-import profile01 from "../../../../assets_old/images/profile/1.jpg";
-import profile02 from "../../../../assets_old/images/profile/2.jpg";
-import profile03 from "../../../../assets_old/images/profile/3.jpg";
-import profile04 from "../../../../assets_old/images/profile/4.jpg";
-import profile05 from "../../../../assets_old/images/profile/5.jpg";
-import profile06 from "../../../../assets_old/images/profile/6.jpg";
-import profile07 from "../../../../assets_old/images/profile/7.jpg";
-import profile08 from "../../../../assets_old/images/profile/8.jpg";
-import profile09 from "../../../../assets_old/images/profile/9.jpg";
-import profile from "../../../../assets_old/images/profile/profile.png";
+import profile01 from "../../../../assets/images/profile/1.jpg";
+import profile02 from "../../../../assets/images/profile/2.jpg";
+import profile03 from "../../../../assets/images/profile/3.jpg";
+import profile04 from "../../../../assets/images/profile/4.jpg";
+import profile05 from "../../../../assets/images/profile/5.jpg";
+import profile06 from "../../../../assets/images/profile/6.jpg";
+import profile07 from "../../../../assets/images/profile/7.jpg";
+import profile08 from "../../../../assets/images/profile/8.jpg";
+import profile09 from "../../../../assets/images/profile/9.jpg";
+import profile from "../../../../assets/images/profile/profile.png";
 import PageTitle from "../../../layouts/PageTitle";
 
 const galleryBlog = [

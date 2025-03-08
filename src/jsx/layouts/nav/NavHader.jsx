@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 /// images
-import logo from "../../../assets_old/images/logo.png";
-import logoText from "../../../assets_old/images/logo-text.png";
+import logo from "../../../assets/images/logo.png";
+import logoText from "../../../assets/images/logo-text.png";
 
 export function NavMenuToggle() {
    setTimeout(() => {

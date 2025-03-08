@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Dropdown } from 'react-bootstrap'
 
-import profileImage from '../../../../../assets_old/images/avatar/1.jpg'
+import profileImage from '../../../../../assets/images/avatar/1.jpg'
 import PageTitle from '../../../../layouts/PageTitle'
 
 const Read = () => {

@@ -3,8 +3,8 @@ import PageTitle from "../../../../layouts/PageTitle";
 import { Dropdown } from "react-bootstrap";
 
 /// images
-import avartar5 from "../../../../../assets_old/images/avatar/5.png";
-import avartar1 from "../../../../../assets_old/images/avatar/1.png";
+import avartar5 from "../../../../../assets/images/avatar/5.png";
+import avartar1 from "../../../../../assets/images/avatar/1.png";
 import { Link } from "react-router-dom";
 
 const Customers = () => {

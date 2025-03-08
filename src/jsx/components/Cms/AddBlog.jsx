@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import DatePicker from "react-datepicker";
 import CkEditorBlog from '../Forms/CkEditor/CkEditorBlog';
 
-import NoImage from '../../../assets_old/images/no-image.jpg';
+import NoImage from '../../../assets/images/no-image.jpg';
 import Select from 'react-select';
 import { Collapse } from 'react-bootstrap';
 

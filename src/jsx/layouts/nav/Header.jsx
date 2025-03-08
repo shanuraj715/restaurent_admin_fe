@@ -6,36 +6,38 @@ import { Dropdown } from "react-bootstrap";
 import Logout from './Logout';
 
 /// Image
-import profile from "../../../assets_old/images/profile/17.jpg";
-import avatar from "../../../assets_old/images/avatar/1.jpg";
+import profile from "../../../assets/images/profile/17.jpg";
+import avatar from "../../../assets/images/avatar/1.jpg";
 
 const Header = ({ onNote }) => {
   var path = window.location.pathname.split("/");
   var name = path[path.length - 1].split("-");
   var filterName = name.length >= 3 ? name.filter((n, i) => i > 0) : name;
-  var finalName = filterName.includes("app")
-    ? filterName.filter((f) => f !== "app")
-    : filterName.includes("ui")
-      ? filterName.filter((f) => f !== "ui")
-      : filterName.includes("uc")
-        ? filterName.filter((f) => f !== "uc")
-        : filterName.includes("basic")
-          ? filterName.filter((f) => f !== "basic")
-          : filterName.includes("jquery")
-            ? filterName.filter((f) => f !== "jquery")
-            : filterName.includes("table")
-              ? filterName.filter((f) => f !== "table")
-              : filterName.includes("page")
-                ? filterName.filter((f) => f !== "page")
-                : filterName.includes("email")
-                  ? filterName.filter((f) => f !== "email")
-                  : filterName.includes("ecom")
-                    ? filterName.filter((f) => f !== "ecom")
-                    : filterName.includes("chart")
-                      ? filterName.filter((f) => f !== "chart")
-                      : filterName.includes("editor")
-                        ? filterName.filter((f) => f !== "editor")
-                        : filterName;
+  // var finalName = filterName.includes("app")
+  //   ? filterName.filter((f) => f !== "app")
+  //   : filterName.includes("ui")
+  //     ? filterName.filter((f) => f !== "ui")
+  //     : filterName.includes("uc")
+  //       ? filterName.filter((f) => f !== "uc")
+  //       : filterName.includes("basic")
+  //         ? filterName.filter((f) => f !== "basic")
+  //         : filterName.includes("jquery")
+  //           ? filterName.filter((f) => f !== "jquery")
+  //           : filterName.includes("table")
+  //             ? filterName.filter((f) => f !== "table")
+  //             : filterName.includes("page")
+  //               ? filterName.filter((f) => f !== "page")
+  //               : filterName.includes("email")
+  //                 ? filterName.filter((f) => f !== "email")
+  //                 : filterName.includes("ecom")
+  //                   ? filterName.filter((f) => f !== "ecom")
+  //                   : filterName.includes("chart")
+  //                     ? filterName.filter((f) => f !== "chart")
+  //                     : filterName.includes("editor")
+  //                       ? filterName.filter((f) => f !== "editor")
+  //                       : filterName;
+
+  // console.log(finalName)
   return (
     <div className="header">
       <div className="header-content">
@@ -46,7 +48,8 @@ const Header = ({ onNote }) => {
                 className="dashboard_bar"
                 style={{ textTransform: "capitalize" }}
               >
-                {finalName.join(" ").length === 0
+                Shanu
+                {/* {finalName.join(" ").length === 0
                   ? "Dashboard"
                   : finalName.join(" ")}
                 {filterName[0] === "" ? (
@@ -57,7 +60,7 @@ const Header = ({ onNote }) => {
                   <span>Here is your general customers list data</span>
                 ) : (
                   ""
-                )}
+                )} */}
               </div>
             </div>
             <ul className="navbar-nav header-right">

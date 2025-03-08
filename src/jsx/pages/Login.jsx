@@ -5,8 +5,8 @@ import {
 	loadingToggleAction, loginAction,
 } from '../../store/actions/AuthActions';
 
-import logo from '../../assets_old/images/logo.png'
-import logotext from '../../assets_old/images/logo-text.png'
+import logo from '../../assets/images/logo.png'
+import logotext from '../../assets/images/logo-text.png'
 
 function Login(props) {
 	const [email, setEmail] = useState('demo@example.com');

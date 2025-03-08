@@ -12,10 +12,10 @@ import TimeLineChart2 from "../Sego/Home/TimeLineChart2";
 import TimeLineChart3 from "../Sego/Home/TimeLineChart3";
 
 //** Import Image */
-import menu9 from "../../../assets_old/images/menus/9.png";
-import menu10 from "../../../assets_old/images/menus/10.png";
-import menu11 from "../../../assets_old/images/menus/11.png";
-import menu12 from "../../../assets_old/images/menus/12.png";
+import menu9 from "../../../assets/images/menus/9.png";
+import menu10 from "../../../assets/images/menus/10.png";
+import menu11 from "../../../assets/images/menus/11.png";
+import menu12 from "../../../assets/images/menus/12.png";
 
 const BarChart = loadable(() =>
   pMinDelay(import("../Sego/Home/BarChart"), 1000)

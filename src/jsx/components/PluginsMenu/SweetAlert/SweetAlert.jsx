@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import Swal from "sweetalert2";
 import PageTitle from "../../../layouts/PageTitle";
-import thumbpng from '../../../../assets_old/images/hand.png'
+import thumbpng from '../../../../assets/images/hand.png'
 
 const customImageAlert = () => {
   Swal.fire({

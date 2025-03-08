@@ -5,9 +5,9 @@ import { Dropdown } from "react-bootstrap";
 import OrderIdDada from "../Sego/Analytics/OrderIdDada";
 
 //** Import Image */
-import map from "../../../assets_old/images/map.png";
-import profile from "../../../assets_old/images/profile/19.jpg";
-import profile2 from "../../../assets_old/images/profile/18.jpg";
+import map from "../../../assets/images/map.png";
+import profile from "../../../assets/images/profile/19.jpg";
+import profile2 from "../../../assets/images/profile/18.jpg";
 
 function OrderId() {
   return (

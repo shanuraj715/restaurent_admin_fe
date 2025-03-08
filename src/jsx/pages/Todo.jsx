@@ -5,7 +5,7 @@ import { nanoid } from 'nanoid';
 import swal from "sweetalert";
 import PageTitle from "../layouts/PageTitle";
 import Editable from './Editable';
-import pic1 from '../../assets_old/images/profile/small/pic1.jpg';
+import pic1 from '../../assets/images/profile/small/pic1.jpg';
 
 const tableList = [
 	{

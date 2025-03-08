@@ -1,16 +1,16 @@
 //** Import Images */
-import image01 from "../../../../../assets_old/images/product/1.jpg";
-import image02 from "../../../../../assets_old/images/product/2.jpg";
-import image03 from "../../../../../assets_old/images/product/3.jpg";
-import image04 from "../../../../../assets_old/images/product/4.jpg";
-import image05 from "../../../../../assets_old/images/product/5.jpg";
-import image06 from "../../../../../assets_old/images/product/6.jpg";
-import image07 from "../../../../../assets_old/images/product/7.jpg";
+import image01 from "../../../../../assets/images/product/1.jpg";
+import image02 from "../../../../../assets/images/product/2.jpg";
+import image03 from "../../../../../assets/images/product/3.jpg";
+import image04 from "../../../../../assets/images/product/4.jpg";
+import image05 from "../../../../../assets/images/product/5.jpg";
+import image06 from "../../../../../assets/images/product/6.jpg";
+import image07 from "../../../../../assets/images/product/7.jpg";
 
-import listImg01 from "../../../../../assets_old/images/tab/1.jpg";
-import listImg02 from "../../../../../assets_old/images/tab/2.jpg";
-import listImg03 from "../../../../../assets_old/images/tab/3.jpg";
-import listImg04 from "../../../../../assets_old/images/tab/4.jpg";
+import listImg01 from "../../../../../assets/images/tab/1.jpg";
+import listImg02 from "../../../../../assets/images/tab/2.jpg";
+import listImg03 from "../../../../../assets/images/tab/3.jpg";
+import listImg04 from "../../../../../assets/images/tab/4.jpg";
 
 //** Import Rating Start */
 import { starOne, starTwo, starThree, starFour, starFive } from "./ProductStar";

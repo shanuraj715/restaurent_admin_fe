@@ -8,14 +8,14 @@ import 'lightgallery/css/lg-thumbnail.css';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
 
-import big1 from '../../../../assets_old/images/big/img1.jpg';
-import big2 from '../../../../assets_old/images/big/img2.jpg';
-import big3 from '../../../../assets_old/images/big/img3.jpg';
-import big4 from '../../../../assets_old/images/big/img4.jpg';
-import big5 from '../../../../assets_old/images/big/img5.jpg';
-import big6 from '../../../../assets_old/images/big/img6.jpg';
-import big7 from '../../../../assets_old/images/big/img7.jpg';
-import big8 from '../../../../assets_old/images/big/img8.jpg';
+import big1 from '../../../../assets/images/big/img1.jpg';
+import big2 from '../../../../assets/images/big/img2.jpg';
+import big3 from '../../../../assets/images/big/img3.jpg';
+import big4 from '../../../../assets/images/big/img4.jpg';
+import big5 from '../../../../assets/images/big/img5.jpg';
+import big6 from '../../../../assets/images/big/img6.jpg';
+import big7 from '../../../../assets/images/big/img7.jpg';
+import big8 from '../../../../assets/images/big/img8.jpg';
 import PageTitle from '../../../layouts/PageTitle';
 
 const lightGallery = [

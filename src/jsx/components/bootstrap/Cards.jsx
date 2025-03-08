@@ -4,9 +4,9 @@ import React, { Fragment } from 'react'
 import PageTitle from '../../layouts/PageTitle'
 
 /// Image
-import img1 from '../../../assets_old/images/card/1.png'
-import img2 from '../../../assets_old/images/card/2.png'
-import img3 from '../../../assets_old/images/card/3.png'
+import img1 from '../../../assets/images/card/1.png'
+import img2 from '../../../assets/images/card/2.png'
+import img3 from '../../../assets/images/card/3.png'
 /// Bootstrap
 import { Row, Card, Col, Button, Nav } from 'react-bootstrap'
 import { Link } from 'react-router-dom'

@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 
 //Images
-import dish_pic8 from "../../../../assets_old/images/dish/pic8.jpg";
-import dish_pic11 from "../../../../assets_old/images/dish/pic11.jpg";
+import dish_pic8 from "../../../../assets/images/dish/pic8.jpg";
+import dish_pic11 from "../../../../assets/images/dish/pic11.jpg";
 
 const DailyFavorites = () => {
   const [refreshToggle, setRefreshToggle] = useState(false);

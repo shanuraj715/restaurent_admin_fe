@@ -4,7 +4,7 @@ import { Modal } from "react-bootstrap";
 /// Link
 import { Link } from "react-router-dom";
 import { MenuList } from "./Menu";
-import foodServing from "../../../assets_old/images/food-serving.png";
+import foodServing from "../../../assets/images/food-serving.png";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 
 

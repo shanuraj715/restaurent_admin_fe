@@ -2,9 +2,9 @@ import React, { Fragment } from "react";
 import PageTitle from "../../../../layouts/PageTitle";
 
 // images
-import qrcode from "../../../../../assets_old/images/qr.png";
-import logo from "../../../../../assets_old/images/logo.png";
-import logoText from "../../../../../assets_old/images/logo-text.png";
+import qrcode from "../../../../../assets/images/qr.png";
+import logo from "../../../../../assets/images/logo.png";
+import logoText from "../../../../../assets/images/logo-text.png";
 
 
 const Invoice = () => {

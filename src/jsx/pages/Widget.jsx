@@ -8,13 +8,13 @@ import PageTitle from '../layouts/PageTitle'
 import { Dropdown, Tab, Nav } from 'react-bootstrap'
 
 // images
-import avatar1 from '../../assets_old/images/avatar/1.jpg'
-import avatar2 from '../../assets_old/images/avatar/2.jpg'
-import avatar3 from '../../assets_old/images/avatar/3.jpg'
-import avatar4 from '../../assets_old/images/avatar/4.jpg'
-import profile from '../../assets_old/images/profile/profile.png'
-import bg5 from '../../assets_old/images/big/img5.jpg'
-import bg1 from '../../assets_old/images/big/img1.jpg'
+import avatar1 from '../../assets/images/avatar/1.jpg'
+import avatar2 from '../../assets/images/avatar/2.jpg'
+import avatar3 from '../../assets/images/avatar/3.jpg'
+import avatar4 from '../../assets/images/avatar/4.jpg'
+import profile from '../../assets/images/profile/profile.png'
+import bg5 from '../../assets/images/big/img5.jpg'
+import bg1 from '../../assets/images/big/img1.jpg'
 
 // Chart
 import { Sparklines, SparklinesLine, SparklinesBars } from 'react-sparklines'
