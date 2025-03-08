@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Error404 = () => {
   return (
-    <div className='authincation'>
+    <div className='py-4'>
       <div className='container'>
         <div className='row justify-content-center h-100 align-items-center'>
           <div className='col-md-8'>

@@ -38,11 +38,11 @@ export function formatError(errorResponse) {
             break;
         case 'EMAIL_NOT_FOUND':
             //return 'Email not found';
-           swal("Oops", "Email not found", "error",{ button: "Try Again!",});
-           break;
+            swal("Oops", "Email not found", "error", { button: "Try Again!", });
+            break;
         case 'INVALID_PASSWORD':
             //return 'Invalid Password';
-            swal("Oops", "Invalid Password", "error",{ button: "Try Again!",});
+            swal("Oops", "Invalid Password", "error", { button: "Try Again!", });
             break;
         case 'USER_DISABLED':
             return 'User Disabled';
@@ -71,7 +71,7 @@ export function checkAutoLogin(dispatch, navigate) {
     let tokenDetails = '';
     if (!tokenDetailsString) {
         dispatch(Logout(navigate));
-		return;
+        return;
     }
 
     tokenDetails = JSON.parse(tokenDetailsString);
@@ -82,18 +82,18 @@ export function checkAutoLogin(dispatch, navigate) {
         dispatch(Logout(navigate));
         return;
     }
-		
+
     dispatch(loginConfirmedAction(tokenDetails));
-	
+
     const timer = expireDate.getTime() - todaysDate.getTime();
-    runLogoutTimer(dispatch, timer, navigate);
+    // runLogoutTimer(dispatch, timer, navigate);
 }
 export function isLogin() {
     const tokenDetailsString = localStorage.getItem('userDetails');
 
     if (tokenDetailsString) {
         return true;
-    }else{
+    } else {
         return false;
     }
 }

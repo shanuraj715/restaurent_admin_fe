@@ -2,7 +2,8 @@ import { lazy, Suspense, useEffect } from 'react';
 
 /// Components
 import Index from "./jsx";
-import { connect, useDispatch } from 'react-redux';
+import { Helmet } from "react-helmet";
+import { connect, useDispatch, useSelector } from 'react-redux';
 import { Route, Routes, useLocation, useNavigate, useParams } from 'react-router-dom';
 // action
 import { checkAutoLogin } from './services/AuthService';
@@ -11,11 +12,11 @@ import { isAuthenticated } from './store/selectors/AuthSelectors';
 
 import "./assets/css/style.css";
 
-const SignUp = lazy(() => import('./jsx/pages/Registration'));
-const ForgotPassword = lazy(() => import('./jsx/pages/ForgotPassword'));
+const SignUp = lazy(() => import('./jsx/_pages/Registration'));
+// const ForgotPassword = lazy(() => import('./jsx/_pages/ForgotPassword'));
 const Login = lazy(() => {
   return new Promise(resolve => {
-    setTimeout(() => resolve(import('./jsx/pages/Login')), 500);
+    setTimeout(() => resolve(import('./jsx/pages/Login/Login')), 500);
   });
 });
 
@@ -40,10 +41,15 @@ function withRouter(Component) {
 
 function App(props) {
   const dispatch = useDispatch();
+  const pageData = useSelector((state) => state.pageData);
   const navigate = useNavigate();
   useEffect(() => {
     checkAutoLogin(dispatch, navigate);
   }, []);
+
+  useEffect(() => {
+    document.title = pageData.pageTitle;
+  }, [pageData.pageTitle])
 
 
 
@@ -52,7 +58,7 @@ function App(props) {
     <Routes>
       <Route path='/login' element={<Login />} />
       <Route path='/page-register' element={<SignUp />} />
-      <Route path='/page-forgot-password' element={<ForgotPassword />} />
+      {/* <Route path='/page-forgot-password' element={<ForgotPassword />} /> */}
     </Routes>
   );
   if (props.isAuthenticated) {
@@ -68,7 +74,7 @@ function App(props) {
           </div>
         }
         >
-          <Index />
+          <Index userType={'normal'} />
         </Suspense>
       </>
     );
@@ -87,6 +93,10 @@ function App(props) {
         }
         >
           {routeblog}
+          {/* <Helmet>
+            {console.log(pageData)}
+            <title>{pageData.pageTitle}</title>
+          </Helmet> */}
         </Suspense>
       </div>
     );

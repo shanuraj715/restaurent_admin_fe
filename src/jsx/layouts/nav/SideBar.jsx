@@ -3,9 +3,10 @@ import { Collapse } from 'react-bootstrap';
 import { Modal } from "react-bootstrap";
 /// Link
 import { Link } from "react-router-dom";
-import { MenuList } from "./Menu";
+import getMenu from "./Menu";
 import foodServing from "../../../assets/images/food-serving.png";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
+import genericFunctions from "../../../utility/genericFunctions";
 
 
 const reducer = (previousState, updatedState) => ({
@@ -28,6 +29,7 @@ const SideBar = () => {
   }
 
   const [hideOnScroll, setHideOnScroll] = useState(true)
+  const MenuList = getMenu("user");
   useScrollPosition(
     ({ prevPos, currPos }) => {
       const isShow = currPos.y > prevPos.y
@@ -52,23 +54,20 @@ const SideBar = () => {
 
 
   /// Path
-  let path = window.location.pathname;
-  path = path.split("/");
-  path = path[path.length - 1];
+  const fullPath = window.location.pathname.substring(1);
+  let path = fullPath.split("/");
+  path = path[0];
   useEffect(() => {
     MenuList.forEach((data) => {
-      data.content?.forEach((item) => {
-        if (path === item.to) {
-          setState({ active: data.title })
+      data.content?.forEach(item => {
+        if (data.startsWith.includes(path)) {
+          setState({
+            active: data.title
+          })
         }
-        item.content?.forEach(ele => {
-          if (path === ele.to) {
-            setState({ activeSubmenu: item.title, active: data.title })
-          }
-        })
       })
     })
-  }, [path]);
+  }, [fullPath]);
 
   return (
     <div className="deznav">
@@ -82,29 +81,29 @@ const SideBar = () => {
               )
             } else {
               return (
-                <li className={` ${state.active === data.title ? 'mm-active' : ''} ${data.to === path ? 'mm-active' : ''}`}
+                <li className={` ${genericFunctions.compareArrays(data.startsWith, state.active) ? 'mm-active' : ''} ${data.startsWith.includes(path) ? 'mm-active' : ''}`}
                   key={index}
                 >
                   {data.content && data.content.length > 0 ?
                     <Fragment>
                       <Link to={"#"}
                         className="has-arrow"
-                        onClick={() => { handleMenuActive(data.title) }}
+                        onClick={() => { handleMenuActive(data.startsWith) }}
                       >
                         {data.iconStyle}{" "}
                         <span className="nav-text">{data.title}</span>
                       </Link>
-                      <Collapse in={state.active === data.title ? true : false}>
+                      <Collapse in={genericFunctions.compareArrays(data.startsWith, state.active) || data.startsWith.includes(path) ? true : false}>
                         <ul className={`${menuClass === "mm-collapse" ? "mm-show" : ""}`}>
                           {data.content && data.content.map((data, index) => {
                             return (
                               <li key={index}
-                                className={`${state.activeSubmenu === data.title ? "mm-active" : ""} ${data.to === path ? 'mm-active' : ''}`}
+                                className={`${genericFunctions.compareArrays(data.startsWith, state.active) ? "mm-active" : ""} ${data.startsWith.includes(fullPath) ? 'mm-active' : ''}`}
                               >
                                 {data.content && data.content.length > 0 ?
                                   <>
                                     <Link to={data.to} className={data.hasMenu ? 'has-arrow' : ''}
-                                      onClick={() => { handleSubmenuActive(data.title) }}
+                                      onClick={() => { handleSubmenuActive(data.startsWith) }}
                                     >
                                       {data.title}
                                     </Link>
@@ -114,7 +113,7 @@ const SideBar = () => {
                                           return (
                                             <Fragment key={index}>
                                               <li>
-                                                <Link className={`${path === data.to ? "mm-active" : ""}`} to={data.to}>{data.title}</Link>
+                                                <Link className={`${data.startsWith.includes(fullPath) ? "mm-active" : ""}`} to={data.to}>{data.title}</Link>
                                               </li>
                                             </Fragment>
                                           )
@@ -123,7 +122,7 @@ const SideBar = () => {
                                     </Collapse>
                                   </>
                                   :
-                                  <Link to={data.to} className={`${data.to === path ? 'mm-active' : ''}`}>
+                                  <Link to={data.to} className={`${data.startsWith.includes(fullPath) ? 'mm-active' : ''}`}>
                                     {data.title}
                                   </Link>
                                 }
@@ -148,7 +147,7 @@ const SideBar = () => {
             }
           })}
         </ul>
-        <div className="add-menu-sidebar">
+        {/* <div className="add-menu-sidebar">
           <img src={foodServing} alt="foodServing" />
           <p className="mb-3">Organize your menus through button bellow</p>
           <span className="fs-12 d-block mb-3">Lorem ipsum dolor sit amet</span>
@@ -182,14 +181,14 @@ const SideBar = () => {
               </div>
             </form>
           </Modal.Body>
-        </Modal>
+        </Modal> */}
         <div className="copyright">
           <p>
-            <strong>Sego Restaurant Admin Dashboard</strong> © {d.getFullYear()} All Rights Reserved
+            <strong>STWD Restaurant Dashboard</strong> © {d.getFullYear()} All Rights Reserved
           </p>
           <p>
             Made with{" "}
-            <span className="heart" onClick={() => heartBlast()}></span>{" "}by DexignZone
+            <span className="heart" onClick={() => heartBlast()}></span>{" "}by Shanu Raj
           </p>
         </div>
       </div>

@@ -14,6 +14,7 @@ const initialState = {
         localId: '',
         expiresIn: '',
         refreshToken: '',
+        userType: 'admin'
     },
     errorMessage: '',
     successMessage: '',
@@ -51,6 +52,7 @@ export function AuthReducer(state = initialState, action) {
                 localId: '',
                 expiresIn: '',
                 refreshToken: '',
+                userType: ''
             },
         };
     }
@@ -76,4 +78,4 @@ export function AuthReducer(state = initialState, action) {
     return state;
 }
 
-    
+
