@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { updatePageTitle } from '../../../store/actions/PageData';
+import { updatePageTitle, updateHeaderText } from '../../../store/actions/PageData';
 import CONSTANTS from '../../../constants';
 
 function ManageUsers() {
@@ -8,6 +8,7 @@ function ManageUsers() {
 
     useEffect(() => {
         dispatch(updatePageTitle(CONSTANTS.PAGE_TITLES.manage_users))
+        dispatch(updateHeaderText(CONSTANTS.PAGE_HEADER_TITLE.manage_members))
     }, [])
 
     return (

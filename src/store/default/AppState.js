@@ -28,5 +28,6 @@ export const appState = {
         id: 2,
         name: "Outlet 2"
     },
-    loader: false
+    loader: false,
+    isSidebarVisible: true
 }

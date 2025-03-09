@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { updatePageTitle } from '../../../store/actions/PageData';
+import { updateHeaderText, updatePageTitle } from '../../../store/actions/PageData';
 import CONSTANTS from '../../../constants';
 import Infocard from '../../components/_app/Infocard/InfoCard';
 import genericFunctions from '../../../utility/genericFunctions';
 
 const cardIcons = [
-    <i className="fa-solid fa-utensils"></i>,
-    <i className="fa-solid fa-coins"></i>,
-    <i className="fa-solid fa-bars"></i>,
+    <i key={0} className="fa-solid fa-utensils"></i>,
+    <i key={1} className="fa-solid fa-coins"></i>,
+    <i key={2} className="fa-solid fa-bars"></i>,
 ];
 
 function Dashboard() {
@@ -16,6 +16,7 @@ function Dashboard() {
 
     useEffect(() => {
         dispatch(updatePageTitle(CONSTANTS.PAGE_TITLES.dashbaord));
+        dispatch(updateHeaderText(CONSTANTS.PAGE_HEADER_TITLE.dashboard));
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 

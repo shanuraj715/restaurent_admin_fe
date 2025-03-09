@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { hideMenuSidebar, showMenuSidebar } from "../../../store/actions/AppState";
 
 /// images
 import logo from "../../../assets/images/logo.png";
 import logoText from "../../../assets/images/logo-text.png";
 
-export function NavMenuToggle() {
+export function NavMenuToggle(state) {
+   console.log("SHANU")
    setTimeout(() => {
       let mainwrapper = document.querySelector("#main-wrapper");
       if (mainwrapper.classList.contains('menu-toggle')) {
@@ -17,7 +20,24 @@ export function NavMenuToggle() {
 }
 
 const NavHader = () => {
-   const [toggle, setToggle] = useState(false);
+   const appState = useSelector(state => state.appState);
+   const dispatch = useDispatch();
+
+   React.useEffect(() => {
+      console.log(appState);
+   }, [appState]);
+
+   const handleClick = React.useCallback(() => {
+      if (appState.isSidebarVisible) {
+         dispatch(hideMenuSidebar());
+      }
+      else {
+         dispatch(showMenuSidebar());
+      }
+      // NavMenuToggle()
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+   }, [appState.isSidebarVisible]);
+
    return (
       <div className="nav-header">
          <Link to="/" className="brand-logo">
@@ -27,13 +47,9 @@ const NavHader = () => {
          </Link>
 
          <div className="nav-control"
-            onClick={() => {
-               setToggle(!toggle)
-               NavMenuToggle()
-            }
-            }
+            onClick={handleClick}
          >
-            <div className={`hamburger ${toggle ? "is-active" : ""}`}>
+            <div className={`hamburger ${!appState.isSidebarVisible ? "is-active" : ""}`}>
                <span className="line"></span>
                <span className="line"></span>
                <span className="line"></span>

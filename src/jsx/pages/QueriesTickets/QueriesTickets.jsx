@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { updatePageTitle } from '../../../store/actions/PageData';
+import { updatePageTitle, updateHeaderText } from '../../../store/actions/PageData';
 import CONSTANTS from '../../../constants';
 
 function QueriesTickets() {
@@ -8,6 +8,7 @@ function QueriesTickets() {
 
     useEffect(() => {
         dispatch(updatePageTitle(CONSTANTS.PAGE_TITLES.queries_tickets))
+        dispatch(updateHeaderText(CONSTANTS.PAGE_HEADER_TITLE.queries_tickets))
     }, [])
 
     return (

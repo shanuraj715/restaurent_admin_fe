@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { updatePageTitle } from '../../../store/actions/PageData';
+import { updatePageTitle, updateHeaderText } from '../../../store/actions/PageData';
 import CONSTANTS from '../../../constants';
 
 function Category() {
@@ -8,6 +8,8 @@ function Category() {
 
     useEffect(() => {
         dispatch(updatePageTitle(CONSTANTS.PAGE_TITLES.category))
+        dispatch(updateHeaderText(CONSTANTS.PAGE_HEADER_TITLE.category))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (

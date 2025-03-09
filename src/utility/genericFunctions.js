@@ -1,3 +1,5 @@
+import CONSTANTS from "../constants"
+
 const typeChecker = {
     isObject: (obj) => {
         return obj instanceof Object && !(obj instanceof Array)
@@ -137,6 +139,36 @@ const timeModifier = (time = '13:59:12', modifier = 'hh:mm', separator = ':', re
     }
 }
 
+const getClassFromOrderStatus = status => {
+    switch (status) {
+        case 'pending':
+            return 'warning';
+        case 'onWay':
+            return 'info';
+        case 'cancelled':
+            return 'danger';
+        case 'success':
+            return 'success';
+        default:
+            return '';
+    }
+}
+
+const getOrderStatusTextFromOrderStatus = orderStatus => {
+    switch (orderStatus) {
+        case CONSTANTS.ORDER_STATUS.pending:
+            return 'Pending';
+        case CONSTANTS.ORDER_STATUS.onWay:
+            return 'On way';
+        case CONSTANTS.ORDER_STATUS.cancelled:
+            return 'Cancelled';
+        case CONSTANTS.ORDER_STATUS.success:
+            return 'Success';
+        default:
+            return '';
+    }
+}
+
 export default {
     typeChecker,
     stringChecker,
@@ -146,5 +178,7 @@ export default {
     increaseAmountWithFixedPercentWithRounding,
     limitCharcaterLength,
     timestampToTimeandTodayYesterday,
-    timeModifier
+    timeModifier,
+    getClassFromOrderStatus,
+    getOrderStatusTextFromOrderStatus
 }

@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { Routes, Route, Outlet } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
+import clsx from 'clsx';
 /// Css
 import './index.css'
 import './chart.css'
@@ -307,7 +308,7 @@ function MainLayout() {
   return (
     <div id="main-wrapper"
       // className={`show ${ menuToggle ? "menu-toggle" : ""}`}
-      className="show"
+      className={clsx(!appState.isSidebarVisible && "menu-toggle", 'show')}
     >
       <Nav />
       <div className="content-body" style={{ minHeight: window.innerHeight - 64 }}>

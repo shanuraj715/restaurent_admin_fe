@@ -1,11 +1,12 @@
-import genericFunctions from '../../utility/genericFunctions';
 import {
     UPDATE_SELECTED_OUTLET,
     UPDATE_OUTLET_LIST,
     UPDATE_LOADER_STATE,
+    HIDE_MENU_SIDEBAR,
+    SHOW_MENU_SIDEBAR
 } from '../actions/AppState';
 import { appState } from '../default/AppState'
-import { color, cyan, cyanBG, cyanBright } from 'console-log-colors';
+
 
 const initialState = { ...appState };
 
@@ -27,6 +28,18 @@ export function AppDataReducer(state = initialState, action) {
         return {
             ...state,
             loader: action.payload
+        };
+    }
+    if (action.type === HIDE_MENU_SIDEBAR) {
+        return {
+            ...state,
+            isSidebarVisible: false
+        };
+    }
+    if (action.type === SHOW_MENU_SIDEBAR) {
+        return {
+            ...state,
+            isSidebarVisible: true
         };
     }
     return state;

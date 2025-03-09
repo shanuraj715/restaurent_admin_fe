@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { updatePageTitle } from '../../../store/actions/PageData';
+import { updatePageTitle, updateHeaderText } from '../../../store/actions/PageData';
 import CONSTANTS from '../../../constants';
 
 function AddUser() {
@@ -8,6 +8,7 @@ function AddUser() {
 
     useEffect(() => {
         dispatch(updatePageTitle(CONSTANTS.PAGE_TITLES.add_user))
+        dispatch(updateHeaderText(CONSTANTS.PAGE_HEADER_TITLE.add_user))
     }, [])
 
     return (

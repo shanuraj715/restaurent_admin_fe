@@ -40347,7 +40347,7 @@ code {
 
 .pagination .page-item .page-link:hover i,
 .pagination .page-item .page-link span {
-  color: #fff;
+  /* color: #fff; */
 }
 .pagination .page-item .page-link:focus {
   outline: 0;
@@ -40470,7 +40470,8 @@ code {
   color: #fff;
 }
 
-.pagination-danger .page-item .page-link {
+.pagination-danger .page-item .page-link,
+.pagination-danger .page-item .page-link span{
   background: rgb(254.1267015707, 228.0732984293, 237.5340314136);
   border-color: rgb(254.1267015707, 228.0732984293, 237.5340314136);
   color: #f94687;
