@@ -169,6 +169,37 @@ const getOrderStatusTextFromOrderStatus = orderStatus => {
     }
 }
 
+const isVegOnlyOrder = (orderData) => {
+    if (!typeChecker.isObject(orderData)) return '';
+    return orderData.items.every((item) => item.isVeg)
+}
+
+function calculateDistance(lat1, lon1, lat2, lon2) {
+    const toRadians = (degrees) => degrees * (Math.PI / 180); // Convert degrees to radians
+
+    const R = 6371e3; // Radius of the Earth in meters
+    const φ1 = toRadians(lat1); // Latitude of point 1 in radians
+    const φ2 = toRadians(lat2); // Latitude of point 2 in radians
+    const Δφ = toRadians(lat2 - lat1); // Difference in latitude
+    const Δλ = toRadians(lon2 - lon1); // Difference in longitude
+
+    // Haversine formula
+    const a =
+        Math.sin(Δφ / 2) * Math.sin(Δφ / 2) +
+        Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ / 2) * Math.sin(Δλ / 2);
+
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+    const distance = R * c; // Distance in meters
+    return {
+        distanceInM: distance.toFixed(2),
+        distanceInKm: (distance / 1000).toFixed(2),
+        _distanceInM: Math.floor(distance),
+        _distanceInKm: Math.floor(distance / 1000)
+
+    };
+}
+
 export default {
     typeChecker,
     stringChecker,
@@ -180,5 +211,7 @@ export default {
     timestampToTimeandTodayYesterday,
     timeModifier,
     getClassFromOrderStatus,
-    getOrderStatusTextFromOrderStatus
+    getOrderStatusTextFromOrderStatus,
+    isVegOnlyOrder,
+    calculateDistance
 }

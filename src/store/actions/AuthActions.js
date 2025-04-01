@@ -1,7 +1,6 @@
 import React from 'react';
 //import { useNavigate } from "react-router-dom";
 
-
 import {
     formatError,
     login,
@@ -9,7 +8,8 @@ import {
     saveTokenInLocalStorage,
     signUp,
 } from '../../services/AuthService';
-
+import { toast } from 'react-toastify';
+import { setLoader, removeLoader } from './AppState';
 
 export const SIGNUP_CONFIRMED_ACTION = '[signup action] confirmed signup';
 export const SIGNUP_FAILED_ACTION = '[signup action] failed signup';
@@ -18,65 +18,82 @@ export const LOGIN_FAILED_ACTION = '[login action] failed login';
 export const LOADING_TOGGLE_ACTION = '[Loading action] toggle loading';
 export const LOGOUT_ACTION = '[Logout action] logout action';
 
-
-
 export function signupAction(email, password, navigate) {
-	
     return (dispatch) => {
         signUp(email, password)
-        .then((response) => {
-            saveTokenInLocalStorage(response.data);
-            runLogoutTimer(
-                dispatch,
-                response.data.expiresIn * 1000,
-                //history,
-            );
-            dispatch(confirmedSignupAction(response.data));
-            navigate('/dashboard');
-			//history.push('/dashboard');
-        })
-        .catch((error) => {
-            const errorMessage = formatError(error.response.data);
-            dispatch(signupFailedAction(errorMessage));
-        });
+            .then((response) => {
+                saveTokenInLocalStorage(response.data);
+                // runLogoutTimer(
+                //     dispatch,
+                //     response.data.expiresIn * 1000,
+                //     //history,
+                // );
+                dispatch(confirmedSignupAction(response.data));
+                navigate('/dashboard');
+                //history.push('/dashboard');
+            })
+            .catch((error) => {
+                const errorMessage = formatError(error.response.data);
+                dispatch(signupFailedAction(errorMessage));
+            });
     };
 }
 
 export function Logout(navigate) {
-	localStorage.removeItem('userDetails');
-    navigate('/login');
-	//history.push('/login');
-    
-	return {
+    localStorage.removeItem('token');
+    localStorage.removeItem('email');
+    // navigate('/login');
+    //history.push('/login');
+
+    return {
         type: LOGOUT_ACTION,
     };
 }
 
+export const loginSuccess = (response, dispatch) => {
+    const loginData = {
+        name: response.data.name,
+        email: response.data.email,
+        mobile: response.data.phone,
+        userType: response.data.role,
+        userId: response.data.userId,
+        lastLogin: response.data.lastLogin,
+        token: response.data.token,
+    };
+    dispatch(loginConfirmedAction(loginData));
+};
+
 export function loginAction(email, password, navigate) {
     return (dispatch) => {
-         login(email, password)
-            .then((response) => { 
-                saveTokenInLocalStorage(response.data);
-                runLogoutTimer(
-                    dispatch,
-                    response.data.expiresIn * 1000,
-                    navigate,
+        dispatch(setLoader());
+        login(email, password)
+            .then((response) => {
+                if (response.status === 401) {
+                    toast.error('Invalid email or password');
+                    return;
+                }
+                if (response.status === 403) {
+                    toast.error('Account not activated');
+                    return;
+                }
+                saveTokenInLocalStorage(
+                    response.data?.token,
+                    response.data?.email,
                 );
-               dispatch(loginConfirmedAction(response.data));
-			   //console.log('kk------1');
-			   //console.log(kk);
-			   //console.log(response.data);
-			   //console.log('kk------2');
-			   //return response.data;
-				//return 'success';
-				//history.push('/dashboard');                
-				navigate('/dashboard');                
+                // runLogoutTimer(
+                //     dispatch,
+                //     response.data.expiresIn * 1000,
+                //     navigate,
+                // );
+                loginSuccess(response, dispatch);
             })
             .catch((error) => {
-				//console.log('error');
-				//console.log(error);
-                const errorMessage = formatError(error.response.data);
-                dispatch(loginFailedAction(errorMessage));
+                console.log(error);
+                // const errorMessage = formatError(error.response.data);
+                // dispatch(loginFailedAction(errorMessage));
+            })
+            .finally(() => {
+                dispatch(removeLoader());
             });
     };
 }
@@ -115,3 +132,12 @@ export function loadingToggleAction(status) {
         payload: status,
     };
 }
+// export function checkLoginUsingToken() {
+//     return dispatch => {
+//         dispatch(setLoader())
+//         const token = localStorage.getItem('token');
+//         if(token){
+
+//         }
+//     }
+// }

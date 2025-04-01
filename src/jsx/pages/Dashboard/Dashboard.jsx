@@ -20,13 +20,13 @@ function Dashboard() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    const addedAmount = genericFunctions.increaseAmountWithFixedPercentWithRounding(2700, 30);
+    const addedAmount = genericFunctions.increaseAmountWithFixedPercentWithRounding(2700, 10);
 
     return (
         <div className="row">
             <div className="col-xl-4 col-xxl-6 col-sm-6">
                 <Infocard
-                    progress={(315 / 327) * 100}
+                    progress={(200 / 327) * 100}
                     heading="Completed / Today Orders"
                     value={'315/327'}
                     Icon={cardIcons[0]}
@@ -35,7 +35,7 @@ function Dashboard() {
             <div className="col-xl-4 col-xxl-6 col-sm-6">
                 <Infocard
                     progress={(2700 / addedAmount) * 100}
-                    heading={`Total Revenue (target: ${addedAmount})`}
+                    heading={`Total Revenue (Target: ${addedAmount})`}
                     value={genericFunctions.withRupeeSign(2700)}
                     Icon={cardIcons[1]}
                 />

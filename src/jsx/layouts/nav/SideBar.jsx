@@ -4,6 +4,7 @@ import { Modal } from "react-bootstrap";
 /// Link
 import { Link } from "react-router-dom";
 import getMenu from "./Menu";
+import { useSelector } from "react-redux";
 import foodServing from "../../../assets/images/food-serving.png";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 import genericFunctions from "../../../utility/genericFunctions";
@@ -20,6 +21,7 @@ const initialState = {
 }
 
 const SideBar = () => {
+  const authState = useSelector(state => state.auth.auth);
   var d = new Date();
   const [addMenus, setAddMenus] = useState(false);
   const [state, setState] = useReducer(reducer, initialState);
@@ -29,7 +31,7 @@ const SideBar = () => {
   }
 
   const [hideOnScroll, setHideOnScroll] = useState(true)
-  const MenuList = getMenu("admin");
+  const MenuList = getMenu(authState.userType);
   useScrollPosition(
     ({ prevPos, currPos }) => {
       const isShow = currPos.y > prevPos.y

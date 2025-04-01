@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 /// Scroll
-import { Dropdown } from "react-bootstrap";
+import { Dropdown, Button } from "react-bootstrap";
 import Logout from './Logout';
 
 /// Image
@@ -15,7 +15,6 @@ const Header = ({ onNote }) => {
   const appState = useSelector(state => state.appState)
 
   const outletChangeHandler = (selectedOutlet) => {
-    console.log(selectedOutlet)
     const selected = appState.outletList.find(item => item.id === selectedOutlet);
     dispatch({ type: 'UPDATE_SELECTED_OUTLET', payload: selected })
   }
@@ -34,6 +33,14 @@ const Header = ({ onNote }) => {
               </div>
             </div>
             <ul className="navbar-nav header-right">
+              <div className="nav-item">
+                <Button className='me-2 btn-sm' variant='info'>
+                  Create Order
+                  <span className='btn-icon-end'>
+                    <i className='fa fa-plus' />
+                  </span>
+                </Button>
+              </div>
               <Dropdown className="nav-item" onSelect={outletChangeHandler}>
                 <Dropdown.Toggle
                   variant='outline-primary'

@@ -8,7 +8,6 @@ import logo from "../../../assets/images/logo.png";
 import logoText from "../../../assets/images/logo-text.png";
 
 export function NavMenuToggle(state) {
-   console.log("SHANU")
    setTimeout(() => {
       let mainwrapper = document.querySelector("#main-wrapper");
       if (mainwrapper.classList.contains('menu-toggle')) {
@@ -23,9 +22,9 @@ const NavHader = () => {
    const appState = useSelector(state => state.appState);
    const dispatch = useDispatch();
 
-   React.useEffect(() => {
-      console.log(appState);
-   }, [appState]);
+   // React.useEffect(() => {
+   //    console.log(appState);
+   // }, [appState]);
 
    const handleClick = React.useCallback(() => {
       if (appState.isSidebarVisible) {

@@ -1,9 +1,12 @@
 import axios from 'axios';
-import swal from "sweetalert";
+import swal from 'sweetalert';
 import {
     loginConfirmedAction,
     Logout,
+    loginSuccess,
 } from '../store/actions/AuthActions';
+import CONSTANTS from '../constants';
+import { postRequest } from './request';
 
 export function signUp(email, password) {
     //axios call
@@ -18,31 +21,28 @@ export function signUp(email, password) {
     );
 }
 
-export function login(email, password) {
+export async function login(email, password) {
     const postData = {
         email,
         password,
-        returnSecureToken: true,
     };
-    return axios.post(
-        `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyD3RPAp3nuETDn9OQimqn_YF6zdzqWITII`,
-        postData,
-    );
+    const resp = await postRequest('api/adminUser/login', postData, {}, false);
+    return resp;
 }
 
 export function formatError(errorResponse) {
     switch (errorResponse.error.message) {
         case 'EMAIL_EXISTS':
             //return 'Email already exists';
-            swal("Oops", "Email already exists", "error");
+            swal('Oops', 'Email already exists', 'error');
             break;
         case 'EMAIL_NOT_FOUND':
             //return 'Email not found';
-            swal("Oops", "Email not found", "error", { button: "Try Again!", });
+            swal('Oops', 'Email not found', 'error', { button: 'Try Again!' });
             break;
         case 'INVALID_PASSWORD':
             //return 'Invalid Password';
-            swal("Oops", "Invalid Password", "error", { button: "Try Again!", });
+            swal('Oops', 'Invalid Password', 'error', { button: 'Try Again!' });
             break;
         case 'USER_DISABLED':
             return 'User Disabled';
@@ -52,11 +52,9 @@ export function formatError(errorResponse) {
     }
 }
 
-export function saveTokenInLocalStorage(tokenDetails) {
-    tokenDetails.expireDate = new Date(
-        new Date().getTime() + tokenDetails.expiresIn * 1000,
-    );
-    localStorage.setItem('userDetails', JSON.stringify(tokenDetails));
+export function saveTokenInLocalStorage(token, email) {
+    localStorage.setItem('token', token);
+    localStorage.setItem('email', email);
 }
 
 export function runLogoutTimer(dispatch, timer, navigate) {
@@ -66,34 +64,30 @@ export function runLogoutTimer(dispatch, timer, navigate) {
     }, timer);
 }
 
-export function checkAutoLogin(dispatch, navigate) {
-    const tokenDetailsString = localStorage.getItem('userDetails');
-    let tokenDetails = '';
-    if (!tokenDetailsString) {
-        dispatch(Logout(navigate));
+export async function checkAutoLogin(dispatch, navigate) {
+    // return;
+    const token = localStorage.getItem('token');
+    const email = localStorage.getItem('email');
+
+    if (!token || !email) {
         return;
     }
+    const resp = await postRequest(
+        '/api/adminUser/checkLogin',
+        { token, email },
+        {},
+        false,
+    );
 
-    tokenDetails = JSON.parse(tokenDetailsString);
-    let expireDate = new Date(tokenDetails.expireDate);
-    let todaysDate = new Date();
-
-    if (todaysDate > expireDate) {
-        dispatch(Logout(navigate));
+    if (resp.statusCode !== 200) {
+        localStorage.removeItem('token');
+        localStorage.removeItem('email');
         return;
     }
+    loginSuccess(resp, dispatch);
 
-    dispatch(loginConfirmedAction(tokenDetails));
+    // dispatch(loginConfirmedAction(tokenDetails));
 
-    const timer = expireDate.getTime() - todaysDate.getTime();
+    // const timer = expireDate.getTime() - todaysDate.getTime();
     // runLogoutTimer(dispatch, timer, navigate);
-}
-export function isLogin() {
-    const tokenDetailsString = localStorage.getItem('userDetails');
-
-    if (tokenDetailsString) {
-        return true;
-    } else {
-        return false;
-    }
 }

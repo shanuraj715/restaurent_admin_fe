@@ -44,6 +44,19 @@ function Orders() {
 
     const handleFilterClick = (e) => {
         const filterName = e.target.getAttribute('data-type');
+        console.log(e)
+        if (e.metaKey || e.ctrlKey) {
+            /**
+             * if clicked filter is already present in the filter array
+             * then select all filters.
+             */
+            if (filters.length === 1 && filters[0] === filterName) {
+                setFilters([...CONSTANTS.ORDER_STATUS_LIST]);
+                return;
+            }
+            setFilters([filterName]);
+            return
+        }
         if (filters.includes(filterName)) {
             if (filters.length === 1) {
                 return toast.error("Atleast one filter should be selected");
@@ -62,8 +75,9 @@ function Orders() {
 
     return (<>
         {/* TODO : Add check here (entire row) to not show the amount alert card if user type is not admin */}
-        <OrdersHeader totalEarningsToday={2800} totalOrdersToday={300} success={200} pending={80} calcelled={20} />
-        <Row>
+        {/* TODO : Add check to render from backend. if backed allows then it will render for any user. */}
+        {/* <OrdersHeader totalEarningsToday={2800} totalOrdersToday={300} success={200} pending={80} calcelled={20} /> */}
+        <Row className="align-items-baseline">
             <Col lg={selectedOrder !== null ? 8 : 12}>
                 <Card>
                     <Card.Header>
@@ -85,7 +99,7 @@ function Orders() {
                         <hr className="bg-danger border-2 border-top border-danger" />
                         <Row>
                             <Col lg={12} className='d-flex justify-content-end align-items-center'>
-                                <MyPagination variant="warning" from={1} to={18} active={1} />
+                                <MyPagination variant="danger" from={1} to={18} active={1} />
                             </Col>
                         </Row>
                     </Card.Body>

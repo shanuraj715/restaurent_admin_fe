@@ -53,7 +53,7 @@ function OrdersTable(props) {
                 </tr>
             </thead>
             <tbody>
-                {tableData.slice(0, 8)?.map((data, index) => {
+                {tableData.slice(0, 9)?.map((data, index) => {
                     return (
                         <tr key={index} onClick={() => handleOrderClick(data.orderId)}>
                             <td>

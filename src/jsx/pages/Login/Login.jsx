@@ -4,17 +4,22 @@ import { Link, useNavigate } from 'react-router-dom'
 import {
 	loadingToggleAction, loginAction,
 } from '../../../store/actions/AuthActions';
-
-import logo from '../../../assets/images/logo.png'
-import logotext from '../../../assets/images/logo-text.png'
+import { updatePageTitle } from '../../../store/actions/PageData';
+import CONSTANTS from '../../../constants';
+import { setLoader, removeLoader } from '../../../store/actions/AppState';
+import { toast } from 'react-toastify';
 
 function Login(props) {
-	const [email, setEmail] = useState('demo@example.com');
+	const [email, setEmail] = useState('');
+	const [password, setPassword] = useState('');
 	let errorsObj = { email: '', password: '' };
 	const [errors, setErrors] = useState(errorsObj);
-	const [password, setPassword] = useState('123456');
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
+
+	React.useEffect(() => {
+		dispatch(updatePageTitle(CONSTANTS.PAGE_TITLES.login))
+	}, [])
 
 	function onLogin(e) {
 		e.preventDefault();
@@ -32,7 +37,6 @@ function Login(props) {
 		if (error) {
 			return;
 		}
-		dispatch(loadingToggleAction(true));
 		dispatch(loginAction(email, password, navigate));
 	}
 	const [showPassword, setShowPassword] = useState(false);
@@ -43,10 +47,10 @@ function Login(props) {
 					<div className="col-lg-6 col-md-7 box-skew d-flex">
 						<div className="authincation-content">
 							<div className="mb-4">
-								<h3 className="mb-1 font-w600">Welcome to Sego</h3>
+								<h3 className="mb-1 font-w600">Welcome to {CONSTANTS.APP_NAME_SHORT}</h3>
 								<p className="">Sign in by entering information below</p>
 							</div>
-							{props.errorMessage && (
+							{/* {props.errorMessage && (
 								<div className='bg-red-300 text-red-900 border border-red-900 p-1 my-2'>
 									{props.errorMessage}
 								</div>
@@ -55,7 +59,7 @@ function Login(props) {
 								<div className='bg-green-300 text-green-900 border border-green-900 p-1 my-2'>
 									{props.successMessage}
 								</div>
-							)}
+							)} */}
 							<form onSubmit={onLogin}>
 								<div className="form-group mb-3">
 									<label className="mb-2 form-label">
@@ -89,25 +93,26 @@ function Login(props) {
 									<button type="submit" className="btn btn-primary btn-block">Sign In</button>
 								</div>
 							</form>
-							<div className="new-account mt-2">
+							{/* <div className="new-account mt-2">
 								<p className="mb-0">Don't have an account?{" "}
 									<Link className="text-primary" to="/page-register">Sign up</Link>
 								</p>
-							</div>
+							</div> */}
 						</div>
 					</div>
 					<div className="col-lg-6 col-md-5 d-flex box-skew1">
 						<div className="inner-content align-self-center">
-							<Link to="/dashboard" className="login-logo">
+							{/* <Link to="/dashboard" className="login-logo">
 								<img src={logo} alt="" className="logo-icon me-2" />
 								<img src={logotext} alt="" className="logo-text ms-1" />
-							</Link>
+							</Link> */}
+							<h1>{CONSTANTS.APP_NAME}</h1>
 							<h2 className="m-b10 ">Login To You Now</h2>
-							<p className="m-b40">User Experience & Interface Design Strategy SaaS Solutions</p>
+							<p className="m-b40">{CONSTANTS.APP_NAME} by <strong>{CONSTANTS.APP_DEVELOPER.NAME}</strong></p>
 							<ul className="social-icons mt-4">
-								<li><Link to={"#"}><i className="fab fa-facebook-f"></i></Link></li>
-								<li><Link to={"#"}><i className="fab fa-twitter"></i></Link></li>
-								<li><Link to={"#"}><i className="fab fa-linkedin-in"></i></Link></li>
+								<li><Link target='_blank' to={CONSTANTS.APP_DEVELOPER.URL}><i className="fas fa-link"></i></Link></li>
+								<li><Link target='_blank' to={CONSTANTS.APP_DEVELOPER.GITHUB}><i className="fab fa-github"></i></Link></li>
+								<li><Link target='_blank' to={CONSTANTS.APP_DEVELOPER.LINKEDIN}><i className="fab fa-linkedin-in"></i></Link></li>
 							</ul>
 						</div>
 					</div>

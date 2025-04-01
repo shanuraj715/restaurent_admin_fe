@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 /// React router dom
 import { Routes, Route, Outlet } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
-import { ToastContainer } from 'react-toastify';
 import clsx from 'clsx';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 /// Css
 import './index.css'
 import './chart.css'
@@ -13,7 +13,6 @@ import './mystyles.scss'
 /// Layout
 import Nav from './layouts/nav'
 import Footer from './layouts/Footer'
-import Loader from './components/loader/Loader';
 
 // ALL PAGES
 
@@ -145,11 +144,14 @@ import Error404 from './pages/Error404'
 
 //Scroll To Top
 import ScrollToTop from './layouts/ScrollToTop';
+import { Logout } from '../store/actions/AuthActions';
 
 
 const Markup = ({ userType }) => {
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const authState = useSelector(state => state.auth.auth);
 
   // const _allroutes = [
   //   /// Dashboard
@@ -274,7 +276,20 @@ const Markup = ({ userType }) => {
     // { url: '/queries-tickets', component: <QueriesTickets /> },
   ]
 
-  const routes = userType === 'admin' ? adminRoutes : normalRoutes;
+  const options = {
+    admin: adminRoutes,
+    manager: normalRoutes,
+  }
+
+  const routes = options[authState?.userType]
+
+  useEffect(() => {
+    if (!authState?.token) {
+      console.log("LOGOUT")
+      dispatch(Logout(navigate))
+      // history.push('/login')
+    }
+  }, [])
 
   return (
     <>
@@ -317,8 +332,6 @@ function MainLayout() {
         </div>
       </div>
       <Footer />
-      <ToastContainer position='top-right' closeOnClick={true} autoClose={3000} pauseOnHover={true} />
-      {appState.loader && <Loader />}
     </div>
   )
 

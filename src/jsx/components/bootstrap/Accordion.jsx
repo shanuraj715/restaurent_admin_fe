@@ -16,14 +16,14 @@ const defaultAccordion = [
       "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.",
 
     bg: "info",
-  
+
   },
   {
     title: "Accordion Header Three",
     text:
       "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.",
 
-    bg: "success",  
+    bg: "success",
   },
 ];
 const UiAccordion = () => {
@@ -49,15 +49,15 @@ const UiAccordion = () => {
               <Accordion className="accordion accordion-primary" defaultActiveKey="0">
                 {defaultAccordion.map((d, i) => (
                   <Accordion.Item className="accordion-item" key={i} eventKey={`${i}`}>
-                  <Accordion.Header className="accordion-header rounded-lg">
-                    {d.title}
-                  </Accordion.Header>
-                  <Accordion.Collapse eventKey={`${i}`}>
-                    <div className="accordion-body">{d.text}</div>
-                  </Accordion.Collapse>
+                    <Accordion.Header className="accordion-header rounded-lg">
+                      {d.title}
+                    </Accordion.Header>
+                    <Accordion.Collapse eventKey={`${i}`}>
+                      <div className="accordion-body">{d.text}</div>
+                    </Accordion.Collapse>
                   </Accordion.Item>
                 ))}
-              </Accordion>				
+              </Accordion>
             </Card.Body>
           </Card>
         </Col>
@@ -75,13 +75,13 @@ const UiAccordion = () => {
             <Card.Body>
               <Accordion className="accordion accordion-danger-solid" defaultActiveKey="0">
                 {defaultAccordion.map((data, i) => (
-                  <Accordion.Item  key={i} eventKey={`${i}`}>
+                  <Accordion.Item key={i} eventKey={`${i}`}>
                     <Accordion.Header className="accordion-header">
                       {" "}
-                        {data.title}                      
+                      {data.title}
                     </Accordion.Header>
                     <Accordion.Collapse eventKey={`${i}`} className="accordion__body">
-					          	<div className="accordion-body">{data.text}</div>
+                      <div className="accordion-body">{data.text}</div>
                     </Accordion.Collapse>
                   </Accordion.Item >
                 ))}
@@ -90,7 +90,7 @@ const UiAccordion = () => {
           </Card>
         </Col>
         {/* <!-- Column ends --> */}
-		{/* <!-- Column starts --> */}
+        {/* <!-- Column starts --> */}
         <Col xl="6">
           <Card>
             <Card.Header className="d-block">
@@ -103,12 +103,12 @@ const UiAccordion = () => {
             <Card.Body>
               <Accordion className="accordion accordion-no-gutter accordion-header-bg" defaultActiveKey="0">
                 {defaultAccordion.map((d, i) => (
-                  <Accordion.Item  key={i} eventKey={`${i}`}>
-                    <Accordion.Header  className="accordion-header">
-					            	{d.title}                     
+                  <Accordion.Item key={i} eventKey={`${i}`}>
+                    <Accordion.Header className="accordion-header">
+                      {d.title}
                     </Accordion.Header>
                     <Accordion.Collapse eventKey={`${i}`}>
-						            <div className="accordion-body">{d.text}</div>
+                      <div className="accordion-body">{d.text}</div>
                     </Accordion.Collapse>
                   </Accordion.Item>
                 ))}
@@ -117,7 +117,7 @@ const UiAccordion = () => {
           </Card>
         </Col>
         {/* <!-- Column ends --> */}
-		{/* <!-- Column starts --> */}
+        {/* <!-- Column starts --> */}
         <Col xl="6">
           <Card>
             <Card.Header className="d-block">
@@ -130,12 +130,12 @@ const UiAccordion = () => {
             <Card.Body>
               <Accordion className="accordion accordion-no-gutter " defaultActiveKey="0">
                 {defaultAccordion.map((d, i) => (
-                  <Accordion.Item  key={i}  eventKey={`${i}`}>
+                  <Accordion.Item key={i} eventKey={`${i}`}>
                     <Accordion.Header as='div'>
-						            {d.title}
+                      {d.title}
                     </Accordion.Header>
                     <Accordion.Collapse eventKey={`${i}`}>
-						            <div className="accordion-body">{d.text}</div>
+                      <div className="accordion-body">{d.text}</div>
                     </Accordion.Collapse>
                   </Accordion.Item >
                 ))}
@@ -144,7 +144,7 @@ const UiAccordion = () => {
           </Card>
         </Col>
         {/* <!-- Column ends --> */}
-		{/* <!-- Column starts --> */}
+        {/* <!-- Column starts --> */}
         <Col xl="6">
           <Card>
             <Card.Header className="d-block">
@@ -158,11 +158,11 @@ const UiAccordion = () => {
               <Accordion className="accordion accordion-left-indicator" defaultActiveKey="0">
                 {defaultAccordion.map((d, i) => (
                   <Accordion.Item key={i} eventKey={`${i}`}>
-                    <Accordion.Header  className="accordion-header">
-                        {d.title}
+                    <Accordion.Header className="accordion-header">
+                      {d.title}
                     </Accordion.Header>
                     <Accordion.Collapse eventKey={`${i}`}>
-                        <div className="accordion-body">{d.text}</div>
+                      <div className="accordion-body">{d.text}</div>
                     </Accordion.Collapse>
                   </Accordion.Item>
                 ))}
@@ -171,20 +171,20 @@ const UiAccordion = () => {
           </Card>
         </Col>
         {/* <!-- Column ends --> */}
-       {/* <!-- Column starts --> */}
+        {/* <!-- Column starts --> */}
         <Col xl="6">
           <Card>
             <Card.Header className="d-block">
               <Card.Title>Accordion With Icon</Card.Title>
               <Card.Text className="m-0 subtitle">
-                  Add <code>accordion-with-icon</code> class with{" "}
-                  <code>accordion</code>
+                Add <code>accordion-with-icon</code> class with{" "}
+                <code>accordion</code>
               </Card.Text>
             </Card.Header>
             <Card.Body>
               <Accordion className="accordion accordion-with-icon" defaultActiveKey="0">
                 {defaultAccordion.map((d, i) => (
-                  <Accordion.Item key={i}  eventKey={`${i}`}>
+                  <Accordion.Item key={i} eventKey={`${i}`}>
                     <Accordion.Header className="accordion-header">
                       <span className="accordion-header-icon"></span>
                       <span className="accordion-header-text">{d.title}</span>
@@ -200,7 +200,7 @@ const UiAccordion = () => {
           </Card>
         </Col>
         {/* <!-- Column ends --> */}
-		{/* <!-- Column starts --> */}
+        {/* <!-- Column starts --> */}
         <Col xl="6">
           <Card>
             <Card.Header className="d-block">
@@ -216,8 +216,8 @@ const UiAccordion = () => {
                 defaultActiveKey="0"
               >
                 {defaultAccordion.map((d, i) => (
-                  <Accordion.Item  key={i}  eventKey={`${i}`}>
-                    <Accordion.Header  className={`accordion-header accordion-header-${d.bg}`}>
+                  <Accordion.Item key={i} eventKey={`${i}`}>
+                    <Accordion.Header className={`accordion-header accordion-header-${d.bg}`}>
                       <span className="accordion-header-icon"></span>
                       <span className="accordion-header-text">{d.title}</span>
                       <span className="accordion-header-indicator"></span>
@@ -232,7 +232,7 @@ const UiAccordion = () => {
           </Card>
         </Col>
         {/* <!-- Column ends --> */}
-		{/* <!-- Column starts --> */}
+        {/* <!-- Column starts --> */}
         <Col xl="6">
           <Card>
             <Card.Header className="d-block">
@@ -248,8 +248,8 @@ const UiAccordion = () => {
                 defaultActiveKey="0"
               >
                 {defaultAccordion.map((d, i) => (
-                  <Accordion.Item  key={i} eventKey={`${i}`}>
-                    <Accordion.Header  className="accordion-header  accordion-header-primary">
+                  <Accordion.Item key={i} eventKey={`${i}`}>
+                    <Accordion.Header className="accordion-header  accordion-header-primary">
                       <span className="accordion-header-icon"></span>
                       <span className="accordion-header-text">{d.title}</span>
                       <span className="accordion-header-indicator "></span>
@@ -264,7 +264,7 @@ const UiAccordion = () => {
           </Card>
         </Col>
         {/* <!-- Column ends --> */}
-		{/* <!-- Column starts --> */}
+        {/* <!-- Column starts --> */}
         <Col xl="6">
           <Card>
             <Card.Header className="d-block">
@@ -293,7 +293,7 @@ const UiAccordion = () => {
           </Card>
         </Col>
         {/* <!-- Column ends --> */}
-		{/* <!-- Column starts --> */}
+        {/* <!-- Column starts --> */}
         <Col xl="6">
           <Card className="transparent-card">
             <Card.Header className="d-block">
@@ -307,13 +307,13 @@ const UiAccordion = () => {
               <Accordion className="accordion accordion-header-shadow accordion-rounded" defaultActiveKey="0">
                 {defaultAccordion.map((d, i) => (
                   <Accordion.Item className="accordion-item" key={i} eventKey={`${i}`}>
-                    <Accordion.Header  className="accordion-header  accordion-header--primary">
+                    <Accordion.Header className="accordion-header  accordion-header--primary">
                       <span className="accordion-header-icon"></span>
                       <span className="accordion-header-text">{d.title}</span>
                       <span className="accordion-header-indicator "></span>
                     </Accordion.Header>
                     <Accordion.Collapse eventKey={`${i}`} className="accordion__body">
-                        <div className="accordion-body">{d.text}</div>
+                      <div className="accordion-body">{d.text}</div>
                     </Accordion.Collapse>
                   </Accordion.Item>
                 ))}
@@ -322,7 +322,7 @@ const UiAccordion = () => {
           </Card>
         </Col>
         {/* <!-- Column ends --> */}
-		{/* <!-- Column starts --> */}
+        {/* <!-- Column starts --> */}
         <Col xl="6">
           <Card>
             <Card.Header className="d-block">
@@ -335,14 +335,14 @@ const UiAccordion = () => {
             <Card.Body>
               <Accordion className="accordion accordion-rounded-stylish accordion-bordered" defaultActiveKey="0">
                 {defaultAccordion.map((d, i) => (
-                  <Accordion.Item  key={i}  eventKey={`${i}`}>
-                      <Accordion.Header className="accordion-header accordion-header-primary">
-                        {d.title}
-                        <span className="accordion-header-indicator"></span>					              
-                      </Accordion.Header>
-                      <Accordion.Collapse eventKey={`${i}`} className="accordion__body">
-                        <div className="accordion-body">{d.text}</div>
-                      </Accordion.Collapse>
+                  <Accordion.Item key={i} eventKey={`${i}`}>
+                    <Accordion.Header className="accordion-header accordion-header-primary">
+                      {d.title}
+                      <span className="accordion-header-indicator"></span>
+                    </Accordion.Header>
+                    <Accordion.Collapse eventKey={`${i}`} className="accordion__body">
+                      <div className="accordion-body">{d.text}</div>
+                    </Accordion.Collapse>
                   </Accordion.Item>
                 ))}
               </Accordion>
@@ -350,7 +350,7 @@ const UiAccordion = () => {
           </Card>
         </Col>
         {/* <!-- Column ends --> */}
-		{/* <!-- Column starts --> */}
+        {/* <!-- Column starts --> */}
         <Col xl="6">
           <Card>
             <Card.Header className="d-block">
@@ -363,14 +363,14 @@ const UiAccordion = () => {
             <Card.Body>
               <Accordion className="accordion accordion-rounded-stylish accordion-gradient" defaultActiveKey="0">
                 {defaultAccordion.map((d, i) => (
-                  <Accordion.Item  key={i} eventKey={`${i}`}>
-                    <Accordion.Header  className="accordion-header accordion-header--primary">
+                  <Accordion.Item key={i} eventKey={`${i}`}>
+                    <Accordion.Header className="accordion-header accordion-header--primary">
                       <span className="accordion-header-icon"></span>
                       <span className="accordion-header-text">{d.title}</span>
                       <span className="accordion-header-indicator"></span>
                     </Accordion.Header>
                     <Accordion.Collapse eventKey={`${i}`} className="accordion__body">
-                        <div className="accordion-body">{d.text}</div>
+                      <div className="accordion-body">{d.text}</div>
                     </Accordion.Collapse>
                   </Accordion.Item>
                 ))}

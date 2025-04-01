@@ -10,11 +10,12 @@ import {
 const initialState = {
     auth: {
         email: '',
-        idToken: '',
-        localId: '',
-        expiresIn: '',
-        refreshToken: '',
-        userType: 'admin'
+        userType: '',
+        name: '',
+        mobile: '',
+        userId: '',
+        lastLogin: '',
+        token: '',
     },
     errorMessage: '',
     successMessage: '',
@@ -28,16 +29,23 @@ export function AuthReducer(state = initialState, action) {
             auth: action.payload,
             errorMessage: '',
             successMessage: 'Signup Successfully Completed',
-            showLoading: false,
         };
     }
     if (action.type === LOGIN_CONFIRMED_ACTION) {
+        console.log('SHANU', action);
         return {
             ...state,
-            auth: action.payload,
+            auth: {
+                userId: action.payload.userId,
+                name: action.payload.name,
+                email: action.payload.email,
+                token: action.payload.token,
+                mobile: action.payload.mobile,
+                lastLogin: action.payload.lastLogin,
+                userType: action.payload.userType,
+            },
             errorMessage: '',
             successMessage: 'Login Successfully Completed',
-            showLoading: false,
         };
     }
 
@@ -48,11 +56,12 @@ export function AuthReducer(state = initialState, action) {
             successMessage: '',
             auth: {
                 email: '',
-                idToken: '',
-                localId: '',
-                expiresIn: '',
-                refreshToken: '',
-                userType: ''
+                userType: '',
+                name: '',
+                mobile: '',
+                userId: '',
+                lastLogin: '',
+                token: '',
             },
         };
     }
@@ -77,5 +86,3 @@ export function AuthReducer(state = initialState, action) {
     }
     return state;
 }
-
-
