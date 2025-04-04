@@ -23,6 +23,8 @@ CONSTANTS.PAGE_TITLES = {
     manage_members: 'Manage Members',
     feedback_reviews: 'Feedback & Reviews',
     queries_tickets: 'Queries & Tickets',
+    items: 'Add or Manage Items',
+    settings: 'Manage Settings',
 
     page404: 'Page Not Found',
     login: 'Login',
@@ -40,6 +42,8 @@ CONSTANTS.PAGE_HEADER_TITLE = {
     manage_members: 'Manage Members',
     feedback_reviews: 'Feedback & Reviews',
     queries_tickets: 'Queries & Tickets',
+    items: 'Add or Manage Items',
+    settings: 'Manage Settings',
 };
 
 CONSTANTS.ORDER_STATUS_LIST = ['pending', 'onWay', 'cancelled', 'success'];

@@ -43,6 +43,12 @@ import FeedbackReviews from './pages/FeedbackReviews/FeedbackReviews';
 // Queries & Tickets
 import QueriesTickets from './pages/QueriesTickets/QueriesTickets';
 
+// Settings
+import Settings from './pages/Settings/Settings';
+
+// Items
+import Items from './pages/Items/Items';
+
 /// Dashboard
 // import DashboardHome from "./pages/Dashboard/Dashboard";
 // import Orders from "./components/Dashboard/Orders";
@@ -259,6 +265,8 @@ const Markup = ({ userType }) => {
     { url: '/members/manage', component: <Members_ManageMembers /> },
     { url: '/feedback-reviews', component: <FeedbackReviews /> },
     { url: '/queries-tickets', component: <QueriesTickets /> },
+    { url: '/settings', component: <Settings /> },
+    { url: '/items', component: <Items /> },
   ]
 
   const normalRoutes = [

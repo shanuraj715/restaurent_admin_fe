@@ -27,6 +27,13 @@ const adminMenu = [
         startsWith: ['category'],
     },
     {
+        title: "Items",
+        classsChange: "mm-collapse",
+        iconStyle: <i className="fa-solid fa-burger"></i>,
+        to: 'items',
+        startsWith: ['items'],
+    },
+    {
         title: "Coupons",
         classsChange: "mm-collapse",
         iconStyle: <i className="fa-solid fa-money-bill"></i>,
@@ -91,6 +98,13 @@ const adminMenu = [
         iconStyle: <i className="fa-solid fa-bugs"></i>,
         to: 'queries-tickets',
         startsWith: ['queries-tickets']
+    },
+    {
+        title: "Settings",
+        classsChange: "mm-collapse",
+        iconStyle: <i className="fa-solid fa-gears"></i>,
+        to: 'settings',
+        startsWith: ['settings']
     },
 ]
 

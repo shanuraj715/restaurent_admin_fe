@@ -1,55 +1,62 @@
-import CONSTANTS from "../constants"
+import CONSTANTS from '../constants';
 
 const typeChecker = {
     isObject: (obj) => {
-        return obj instanceof Object && !(obj instanceof Array)
+        return obj instanceof Object && !(obj instanceof Array);
     },
     isArray: (arr) => {
-        return arr instanceof Array
-    }
-}
+        return arr instanceof Array;
+    },
+};
 
 const stringChecker = {
     isEmpty: (str) => {
-        return str === null || str === undefined || str === ""
+        return str === null || str === undefined || str === '';
     },
     isNotEmpty: (str) => {
-        return str !== null && str !== undefined && str !== ""
+        return str !== null && str !== undefined && str !== '';
     },
     isEmail: (email) => {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     },
     isLengthBetween: (start, end) => {
         return (str) => {
-            return str.length >= start && str.length <= end
-        }
+            return str.length >= start && str.length <= end;
+        };
     },
     hasOnlyAlphabets: (str) => {
-        return /^[a-zA-Z]+$/.test(str)
+        return /^[a-zA-Z]+$/.test(str);
     },
     hasOnlyNumbers: (str) => {
-        return /^[0-9]+$/.test(str)
+        return /^[0-9]+$/.test(str);
     },
     hasOnlyAlphaNumeric: (str) => {
-        return /^[a-zA-Z0-9]+$/.test(str)
+        return /^[a-zA-Z0-9]+$/.test(str);
     },
     hasOnlyUppercase: (str) => {
-        return /^[A-Z]+$/.test(str)
-    }
-}
+        return /^[A-Z]+$/.test(str);
+    },
+};
 
 const random = {
-    randomString: (length, withSpecialCharacters = false, withCharacters = []) => {
+    randomString: (
+        length,
+        withSpecialCharacters = false,
+        withCharacters = [],
+    ) => {
         let result = '';
-        let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let characters =
+            'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         if (withCharacters.length > 0) {
-            characters = withCharacters.join('')
+            characters = withCharacters.join('');
         }
         if (withSpecialCharacters) {
-            characters += '!@#_+-'
+            characters += '!@#_+-';
         }
         for (let i = 0; i < length; i++) {
-            result += characters.charAt(Math.floor(Math.random() * characters.length));
+            result += characters.charAt(
+                Math.floor(Math.random() * characters.length),
+            );
         }
         return result;
     },
@@ -57,14 +64,16 @@ const random = {
         let result = '';
         let numbers = '0123456789';
         if (withNumbers.length > 0) {
-            numbers = withNumbers.join('')
+            numbers = withNumbers.join('');
         }
         for (let i = 0; i < length; i++) {
-            result += numbers.charAt(Math.floor(Math.random() * numbers.length));
+            result += numbers.charAt(
+                Math.floor(Math.random() * numbers.length),
+            );
         }
         return result;
-    }
-}
+    },
+};
 
 function compareArrays(arr1, arr2) {
     if (arr1.length !== arr2.length) return false;
@@ -79,53 +88,65 @@ function compareArrays(arr1, arr2) {
 }
 
 const withRupeeSign = (number) => {
-    return `₹ ${number}`
-}
+    return `₹ ${number}`;
+};
 
 const increaseAmountWithFixedPercentWithRounding = (amount, percent) => {
     // return amount with adding the percent in the amount and round the amount with hundred placenemts.
-    return Math.round(amount + (amount * percent / 100))
-
-}
+    return Math.round(amount + (amount * percent) / 100);
+};
 
 const limitCharcaterLength = (string, limit, addEllipsis = true) => {
     if (string.length > limit) {
-        return addEllipsis ? `${string.substring(0, limit)}...` : string.substring(0, limit)
+        return addEllipsis
+            ? `${string.substring(0, limit)}...`
+            : string.substring(0, limit);
     }
     return string;
-}
+};
 
 const timestampToTimeandTodayYesterday = (timestamp) => {
     // return time if the timestamp is today or yesterday else return date.
     const date = new Date(timestamp);
     const copyDate = new Date(timestamp);
     const today = new Date();
-    copyDate.setHours(0, 0, 0, 0)
-    today.setHours(0, 0, 0, 0)
-    const diff = today.getDate() - copyDate.getDate()
+    copyDate.setHours(0, 0, 0, 0);
+    today.setHours(0, 0, 0, 0);
+    const diff = today.getDate() - copyDate.getDate();
     // console.log(copyDate.getDate(), today.getHours(), diff)
     if (diff === 0) {
-        return `${String(date.getHours()).padStart(2, 0)}:${String(date.getMinutes()).padStart(2, 0)}`;
+        return `${String(date.getHours()).padStart(2, 0)}:${String(
+            date.getMinutes(),
+        ).padStart(2, 0)}`;
     }
     if (diff === 1) {
-        return `${String(date.getHours()).padStart(2, 0)}:${String(date.getMinutes()).padStart(2, 0)} / Y`;
+        return `${String(date.getHours()).padStart(2, 0)}:${String(
+            date.getMinutes(),
+        ).padStart(2, 0)} / Y`;
     }
     return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
-}
+};
 
-const timeModifier = (time = '13:59:12', modifier = 'hh:mm', separator = ':', returnInAmPm) => {
+const timeModifier = (
+    time = '13:59:12',
+    modifier = 'hh:mm',
+    separator = ':',
+    returnInAmPm,
+) => {
     // timeModifier('13:59:12', 'hh:mm', ':') => 13:59
     // timeModifier('13:59:12', 'hh:mm:ss', ':') => 13:59:12
     // timeModifier('13:59:12', 'hh:mm:ss', '-') => 13-59-12
     const splitted = time.split(':');
     if (splitted.length < 3) {
-        return "Invalid time";
+        return 'Invalid time';
     }
     let [hours, minutes, seconds] = time.split(':');
     hours = returnInAmPm ? hours % 12 : hours;
     switch (modifier) {
         case 'hh':
-            return `${hours}${returnInAmPm ? hours >= 12 ? ' PM' : ' AM' : ''}`;
+            return `${hours}${
+                returnInAmPm ? (hours >= 12 ? ' PM' : ' AM') : ''
+            }`;
         case 'mm':
             return `${minutes}`;
         case 'ss':
@@ -133,13 +154,17 @@ const timeModifier = (time = '13:59:12', modifier = 'hh:mm', separator = ':', re
         case 'hh:mm':
             return `${hours}${separator}${minutes}`;
         case 'hh:mm:ss':
-            return `${hours}${separator}${minutes}${separator}${seconds}${returnInAmPm ? hours >= 12 ? ' PM' : ' AM' : ''}`;
+            return `${hours}${separator}${minutes}${separator}${seconds}${
+                returnInAmPm ? (hours >= 12 ? ' PM' : ' AM') : ''
+            }`;
         default:
-            return `${hours}${separator}${minutes}${returnInAmPm ? hours >= 12 ? ' PM' : ' AM' : ''}`;
+            return `${hours}${separator}${minutes}${
+                returnInAmPm ? (hours >= 12 ? ' PM' : ' AM') : ''
+            }`;
     }
-}
+};
 
-const getClassFromOrderStatus = status => {
+const getClassFromOrderStatus = (status) => {
     switch (status) {
         case 'pending':
             return 'warning';
@@ -152,9 +177,9 @@ const getClassFromOrderStatus = status => {
         default:
             return '';
     }
-}
+};
 
-const getOrderStatusTextFromOrderStatus = orderStatus => {
+const getOrderStatusTextFromOrderStatus = (orderStatus) => {
     switch (orderStatus) {
         case CONSTANTS.ORDER_STATUS.pending:
             return 'Pending';
@@ -167,12 +192,12 @@ const getOrderStatusTextFromOrderStatus = orderStatus => {
         default:
             return '';
     }
-}
+};
 
 const isVegOnlyOrder = (orderData) => {
     if (!typeChecker.isObject(orderData)) return '';
-    return orderData.items.every((item) => item.isVeg)
-}
+    return orderData.items.every((item) => item.isVeg);
+};
 
 function calculateDistance(lat1, lon1, lat2, lon2) {
     const toRadians = (degrees) => degrees * (Math.PI / 180); // Convert degrees to radians
@@ -195,23 +220,27 @@ function calculateDistance(lat1, lon1, lat2, lon2) {
         distanceInM: distance.toFixed(2),
         distanceInKm: (distance / 1000).toFixed(2),
         _distanceInM: Math.floor(distance),
-        _distanceInKm: Math.floor(distance / 1000)
-
+        _distanceInKm: Math.floor(distance / 1000),
     };
 }
 
+const useQueryParams = (search) => {
+    return Object.fromEntries(new URLSearchParams(search));
+};
+
 export default {
-    typeChecker,
-    stringChecker,
-    random,
+    calculateDistance,
     compareArrays,
-    withRupeeSign,
-    increaseAmountWithFixedPercentWithRounding,
-    limitCharcaterLength,
-    timestampToTimeandTodayYesterday,
-    timeModifier,
     getClassFromOrderStatus,
     getOrderStatusTextFromOrderStatus,
+    increaseAmountWithFixedPercentWithRounding,
     isVegOnlyOrder,
-    calculateDistance
-}
+    limitCharcaterLength,
+    random,
+    stringChecker,
+    timeModifier,
+    timestampToTimeandTodayYesterday,
+    typeChecker,
+    useQueryParams,
+    withRupeeSign,
+};

@@ -55,12 +55,12 @@ function MyPagination(props) {
                 isEllipsisPlacedAtLastIteration = false;
             }
             if (!isEllipsisPlacedAtLastIteration)
-                items.push(<Pagination.Ellipsis key="start-ellipsis" data-a="Shanu" />);
+                items.push(<Pagination.Ellipsis key="start-ellipsis" />);
             isEllipsisPlacedAtLastIteration = true;
         } else {
             // Show an ellipsis if the active page is not close to the start
             if (!isEllipsisPlacedAtLastIteration)
-                items.push(<Pagination.Ellipsis key="start-ellipsis" data-a="Shanu" />);
+                items.push(<Pagination.Ellipsis key="start-ellipsis" />);
             isEllipsisPlacedAtLastIteration = true;
         }
 

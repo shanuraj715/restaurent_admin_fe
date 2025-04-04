@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect } from 'react';
+import { lazy, Suspense, useEffect, useRef } from 'react';
 
 /// Components
 import Index from "./jsx";
@@ -47,6 +47,8 @@ function App(props) {
   const pageData = useSelector((state) => state.pageData);
   const appState = useSelector(state => state.appState)
   const navigate = useNavigate();
+  let location = useLocation();
+  const firstRenderPageUrl = useRef(location.pathname + location.search);
   useEffect(() => {
     checkAutoLogin(dispatch, navigate);
 
@@ -85,7 +87,7 @@ function App(props) {
   useEffect(() => {
     // console.log(props.isAuthenticated)
     if (props.isAuthenticated) {
-      navigate('/dashboard')
+      navigate(firstRenderPageUrl.current, { replace: true });
     }
     else {
       navigate('/login')
